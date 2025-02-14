@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm a computer and software engineer who has always dreamed of teaching and research.  After a career in industry, I've transitioned to teaching and research.  I could not be happier.
+I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching and researching.  I could not be happier.
 
 ### More Information
 
