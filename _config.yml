@@ -6,7 +6,7 @@
 name: Scotts Second Act
 
 # Short bio or description (displayed in the header)
-description: I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching.  I could not be happier.
+description: 
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars.githubusercontent.com/u/89648717?v=4
@@ -28,7 +28,7 @@ footer-links:
   rss:
   twitter:
   stackoverflow:
-  youtube: @scottssecondact-bz3sq?si=bOKkVt3khGJPlM60
+  youtube:
   googleplus:
 
 
