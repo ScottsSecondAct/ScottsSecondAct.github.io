@@ -6,7 +6,9 @@ permalink: /about/
 
 I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching.  I could not be happier.
 
-### Research Interests
+### More Information
+
+#### Research Interests
 
 * Edge AI
   * Artificial Pancreas
