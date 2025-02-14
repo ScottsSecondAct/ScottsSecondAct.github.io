@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching.  I could not be happier.
+I'm a computer and software engineer who has always dreamed of teaching and research.  After a career in industry, I've transitioned to teaching and research.  I could not be happier.
 
 ### More Information
 
@@ -12,7 +12,9 @@ I'm a computer and software engineer who has always dreamed of teaching.  After 
 
 * Sierra Community College in Rocklin, CA
 * California State University, Sacramento
+
 #### Classes that I Teach
+
 * Introduction to Computer Science
 * Introduction to Programming Logic
 * Programming Concepts and Methodology
