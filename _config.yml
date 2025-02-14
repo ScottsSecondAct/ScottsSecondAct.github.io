@@ -21,14 +21,14 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: https://scottssecondact.github.io/
+  github: scottssecondact.github.io
   instagram:
-  linkedin: www.linkedin.com/in/scottdavisgv
+  linkedin: scottdavisgv
   pinterest:
   rss:
   twitter:
   stackoverflow:
-  youtube: https://www.youtube.com/@ScottsSecondAct-bz3sq
+  youtube: @ScottsSecondAct-bz3sq
   googleplus:
 
 
@@ -41,7 +41,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://scottssecondact.github.io/
+url: scottssecondact.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
