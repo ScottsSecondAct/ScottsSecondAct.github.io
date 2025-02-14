@@ -8,7 +8,7 @@ I'm a computer and software engineer who has always dreamed of teaching.  After 
 
 ### More Information
 
-#### Colleges
+#### Colleges Where I Teach
 
 * Sierra Community College in Rocklin, CA
 * California State University, Sacramento
