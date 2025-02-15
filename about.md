@@ -3,14 +3,14 @@ layout: page
 title: About
 permalink: /about/
 ---
-
-I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching and researching.  I could not be happier.
+![Scott's Image](https://avatars.githubusercontent.com/u/89648717?v=4)
+I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching and research.  I could not be happier.
 
 ### More Information
 
 #### Colleges Where I Teach
 
-* Sierra Community College in Rocklin, CA
+* Sierra College
 * California State University, Sacramento
 
 #### Classes that I Teach
@@ -21,7 +21,6 @@ I'm a computer and software engineer who has always dreamed of teaching.  After 
 * Introduction to Computer Architecture
 
 #### Research Interests
-
 
 * Edge AI
   * Artificial Pancreas
