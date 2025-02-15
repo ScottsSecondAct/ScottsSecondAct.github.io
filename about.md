@@ -3,7 +3,8 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Scott's Image](https://avatars.githubusercontent.com/u/89648717?v=4)
+![Scott's Image](https://avatars.githubusercontent.com/u/89648717?v=4)  
+
 I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching and research.  I could not be happier.
 
 ### More Information
