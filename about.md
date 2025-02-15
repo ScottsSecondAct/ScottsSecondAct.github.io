@@ -9,33 +9,34 @@ I'm a computer and software engineer who has always dreamed of teaching.  After 
 
 ### More Information
 
-#### Colleges Where I Teach
+#### Where I Teach
 
-* Sierra College
+* Sierra College in Rocklin, CA
 * California State University, Sacramento
 
 #### Classes that I Teach
 
-* Introduction to Computer Science
-* Introduction to Programming Logic
-* Programming Concepts and Methodology
-* Introduction to Computer Architecture
+* Introduction to Computer Science.
+* Introduction to Programming Logic.
+* Programming Concepts and Methodology.
+* Introduction to Computer Architecture.
 
 #### Research Interests
 
-* Edge AI
-  * Artificial Pancreas
-  * Wearable Healthcare Devices
-* Democratization of Healthcare
-  * Minimizing the cost of precision/personalized healthcare so that it is available universally
+* Edge AI.
+  * Artificial Pancreas.
+  * Wearable Healthcare Devices.
+* Deep Learning.
+  * Computer Vision.
+  * Applications for Healthcare.
 * AI Modeling of Complex Biological Processes
-  * Autoimmune Responses
-* Deep Learning
-  * Computer Vision
-  * Applications for Healthcare
+  * Autoimmune Responses.
+* Complexity.
+* Quantum Computing.
 * Optimum Teaching Modalities for Neurodivergent students.
-* Complexity
-* Quantum Computing
+* Democratization of Healthcare.
+  * Minimizing the cost of precision/personalized healthcare so that it is available universally.
+
 
 ### Contact me
 
