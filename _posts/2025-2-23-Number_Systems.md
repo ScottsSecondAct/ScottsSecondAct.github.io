@@ -14,56 +14,43 @@ The most common number systems include:
 
 Understanding number systems is essential in fields like computer science, electronics, and data representation. Mastering conversions between these systems allows efficient interpretation of digital data and enhances problem-solving skills in technology and engineering.
 
-<hr/>
+---
 
 ## Decimal Number System
 
 The **Hindu-Arabic** or **decimal number system** is a **positional** base-10 system. This means:
 
 1. **Digits:** The system has **ten** digits: **0, 1, 2, 3, 4, 5, 6, 7, 8, 9**.
-2. **Place Value:** The position of a digit determines its value, based on powers of 10.  For example: 10^6^ 10<sup>5</sup>10<sup>4</sup>10<sup>3</sup>10<sup>2</sup>10<sup>1</sup>10<sup>0</sup>
+2. **Place Value:** The position of a digit determines its value, based on powers of 10.  For example: 10&#x2076; 10&#x2075; 10&#x2074; 10&#x00b3; 10&#x00b2; 10&#x00b9; 10&#x2070; 
 3. **Numbers Greater Than 9:** Once you reach 9, the next number (10) requires two digits: **1** in the "tens" place and **0** in the "ones" place.
 
-This is a superscript ^2^
-This is a subscript ~2~
-This is a subscript 10^2
-This is a superscript 10<sup>2</sup>
-
 For example, in **base-10**:
-\[
-3045 = (3 \times 10^3) + (0 \times 10^2) + (4 \times 10^1) + (5 \times 10^0)
-\]
 
-Since any digit multiplied by 0 equals 0, we can omit that value from the calculation resulting in:
-\[
-3045 = (3 \times 10^3) + (4 \times 10^1) + (5 \times 10^0)
-\]
+(3x10&#x00b3;) + (0x10&#x00b2;) + (4x10&#x00b9;) + (5x10&#x2070;) = 3045
 
-<hr/>
+Since any digit multiplied by 0 equals 0, we can omit that value from the calculation resulting in: 
+
+(3x10&#x00b3;) + (4x10&#x00b9;) + (5x10&#x2070;) = 3045
+
+---
 
 ## Binary Number System
 
 The **binary number system** is a **positional** base-2 system. This means:
 
 1. **Digits:** The system has **2** digits: **0, 1**.
-2. **Place Value:** The position of a digit determines its value, based on powers of 2.  For example:   2^7^ 2<sup>6</sup> 2<sup>5</sup> 2<sup>4</sup> 2<sup>3</sup> 2<sup>2</sup> 2<sup>1</sup> 2<sup>0</sup>.
+2. **Place Value:** The position of a digit determines its value, based on powers of 2.  For example:   2&#x2077; 2&#x2076; 2&#x2075; 2&#x2074; 2&#x00b3; 2&#x00b2; 2&#x00b9; 2&#x2070;.
 3. **Numbers Greater Than 1:** Once you reach 1, the next number (2) requires two digits: **1** in the "twos" place and **0** in the "ones" place.
 
-For example, in **base-2**:
+For example, in **base-2**: 1011 1110 0101&#x2082;
 
-1011 1110 0101
-
-\[
-3045 = (1 \times 2^{11})+(0 \times 2^{10})+(1 \times 2^9)+(1 \times 2^8)+(1 \times 2^7) + (1 \times 2^6) + (1 \times 2^5) + (0 \times 2^4) + (0 \times 2^3) +\ (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0)
-\]
+(1x2&#x00b9;&#x00b9;) + (0x2&#x00b9;&#x2070;) + (1x2&#x2079;) + (1x2&#x2078;) + (1x2&#x2077;) + (1x2&#x2076;) + (1x2&#x2075;) + (0x2&#x2074;) + (0x2&#x00b3;) + (1x2&#x00b2;) + (0x2&#x00b9;) + (1x2&#x2070;) = 3045
 
 Since any digit multiplied by 0 equals 0, we can omit that value from the calculation resulting in:
 
-\[
-3045 = (1 \times 2^{11})+(1 \times 2^9)+(1 \times 2^8)+(1 \times 2^7)+(1 \times 2^6)+(1 \times 2^5)+(1 \times 2^2) + (1 \times 2^0)
-\]
+(1x2&#x00b9;&#x00b9;) + (1x2&#x2079;) + (1x2&#x2078;) + (1x2&#x2077;) + (1x2&#x2076;) + (1x2&#x2075;) + (1x2&#x00b2;) + (1x2&#x2070;) = 3045
 
-<hr />
+---
 
 ## Hexadecimal Number System
 
@@ -74,22 +61,19 @@ The **hecadecimal number system** is a **positional** base-16 system. This means
 3. **Numbers Greater Than 16:** Once you reach 16, the next number (16) requires two digits: **1** in the "sixteens" place and **0** in the "ones" place.
 
 For example, in **base-16**:
-\[
-30A = (3 \times 16^2) + (0 \times 16^2) + (10 \times 16^1)
-\]
+
+(3x16&#x00b2;) + (0x16&#x00b9;) + (10x16&#x2070;) = 30A&#x2081;&#x2086;
 
 Since any digit multiplied by 0 equals 0, we can omit that value from the calculation resulting in:
 
-\[
-30A = (3 \times 16^2)+(10 \times 16^0)
-\]
+(3x16&#x00b2;) + (10x16&#x2070;) = 30A&#x2081;&#x2086;
 
 In general, in any **base-**\(b\) number system:
 
 - The available digits range from **0** to \(b - 1\).
 - A number is written using positional notation, where each digit represents a power of the base.
 
-<hr />
+---
 
 ## Conversion Between Number Systems
 
@@ -106,59 +90,59 @@ In general, in any **base-**\(b\) number system:
             <th style="width: 24%; border-style: solid; background-color: #c2e0f4;">Value</th>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>0</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x2070;</td>
             <td style="width: 24%; border-style: solid;">1</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>8</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x2078;</td>
             <td style="width: 24%; border-style: solid;">256</td>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>1</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B9;</td>
             <td style="width: 24%; border-style: solid;">2</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>9</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x2079;</td>
             <td style="width: 24%; border-style: solid;">512</td>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>2</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B2;</td>
             <td style="width: 24%; border-style: solid;">4</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>10</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B9;&#x2070;</td>
             <td style="width: 24%; border-style: solid;">1024</td>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>3</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B3;</td>
             <td style="width: 24%; border-style: solid;">8</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>11</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B9;&#x00B9;</td>
             <td style="width: 24%; border-style: solid;">2048</td>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>4</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x2074;</td>
             <td style="width: 24%; border-style: solid;">16</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>12</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B9;&#x00B2;</td>
             <td style="width: 24%; border-style: solid;">4096</td>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>5</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x2075;</td>
             <td style="width: 24%; border-style: solid;">32</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>13</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B9;&#x00B3;</td>
             <td style="width: 24%; border-style: solid;">8192</td>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>6</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x2076;</td>
             <td style="width: 24%; border-style: solid;">64</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>14</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B9;&#x2074;</td>
             <td style="width: 24%; border-style: solid;">16,384</td>
         </tr>
         <tr>
-            <td style="width: 24%; border-style: solid;">2<sup>7</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x2077;</td>
             <td style="width: 24%; border-style: solid;">128</td>
             <td style="width: 4%; border: none;"></td>
-            <td style="width: 24%; border-style: solid;">2<sup>15</sup></td>
+            <td style="width: 24%; border-style: solid;">2&#x00B9;&#x2075;</td>
             <td style="width: 24%; border-style: solid;">32,768</td>
         </tr>
     </tbody>
@@ -172,19 +156,19 @@ In general, in any **base-**\(b\) number system:
             <th style="width: 50%; border-style: solid; background-color: #c2e0f4;">Value</th>
         </tr>
         <tr style="height: 28px;">
-            <td style="width: 50%; height: 28px; border-style: solid;">16<sup>0</sup></td>
+            <td style="width: 50%; height: 28px; border-style: solid;">16&#x2070;</td>
             <td style="width: 50%; height: 28px; border-style: solid;">1</td>
         </tr>
         <tr style="height: 28px;">
-            <td style="width: 50%; height: 28px; border-style: solid;">16<sup>1</sup></td>
+            <td style="width: 50%; height: 28px; border-style: solid;">16&#x00B9;</td>
             <td style="width: 50%; height: 28px; border-style: solid;">16</td>
         </tr>
         <tr style="height: 28px;">
-            <td style="width: 50%; height: 28px; border-style: solid;">16<sup>2</sup></td>
+            <td style="width: 50%; height: 28px; border-style: solid;">16&#x00B2;</td>
             <td style="width: 50%; height: 28px; border-style: solid;">256</td>
         </tr>
         <tr style="height: 28px;">
-            <td style="width: 50%; height: 28px; border-style: solid;">16<sup>3</sup></td>
+            <td style="width: 50%; height: 28px; border-style: solid;">16&#x00B3;</td>
             <td style="width: 50%; height: 28px; border-style: solid;">4096</td>
         </tr>
     </tbody>
@@ -258,7 +242,7 @@ In general, in any **base-**\(b\) number system:
         </tr>
     </tbody>
 </table>
-<hr />
+---
 <h3>Decimal to Hexadecimal</h3>
 <h4>Example 1: Convert Decimal 27 to Hexadecimal</h4>
 <p><strong>Step 1</strong>: Find the largest power of 16, smaller than or equal to 27.</p>
@@ -279,7 +263,7 @@ In general, in any **base-**\(b\) number system:
     <li>11 in decimal = B</li>
 </ul>
 <p>Putting it all together, the hexadecimal&nbsp;digits are 1 (from the second step) and B (from the third and fourth steps).</p>
-<p><strong>Answer</strong>: 1B<sub>16</sub></p>
+<p><strong>Answer</strong>: 1B&#x2081;&#x2086;</p>
 <h4>Example 2: Convert Decimal 258 to Hexadecimal</h4>
 <p><strong>Step 1</strong>: Find the largest power of 16, smaller than or equal to 258.</p>
 <ul>
@@ -298,10 +282,10 @@ In general, in any **base-**\(b\) number system:
     <li>2 &divide; 1 = 2 remainder 0</li>
 </ul>
 <p>Putting it all together, the hexadecimal&nbsp;digits are 1 (from the second step), 0 (from the third step), and 2 (from the fourth step).</p>
-<p><strong>Answer</strong>: 102<sub>16</sub></p>
-<hr />
+<p><strong>Answer</strong>: 102&#x2081;&#x2086;</p>
+---
 <h3>Hexadecimal to Decimal</h3>
-<h4>Example 1: Convert 1B<sub>16</sub>&nbsp;to Decimal</h4>
+<h4>Example 1: Convert 1B&#x2081;&#x2086;&nbsp;to Decimal</h4>
 <ol>
     <li>
         <p>Identify the hex digits:</p>
@@ -313,8 +297,8 @@ In general, in any **base-**\(b\) number system:
     <li>
         <p>Multiply each digit by 16 to the power of its position:</p>
         <ul>
-            <li><strong>1</strong> &times; 16&sup1; = 1 &times; 16 = 16</li>
-            <li><strong>B</strong> (11 in decimal) &times; 16<sup>0</sup> = 11 &times; 1 = 11</li>
+            <li><strong>1</strong> x 16&sup1; = 1 x 16 = 16</li>
+            <li><strong>B</strong> (11 in decimal) &times; 16&#x2070; = 11 x 1 = 11</li>
         </ul>
     </li>
     <li>
@@ -323,7 +307,7 @@ In general, in any **base-**\(b\) number system:
 </ol>
 <p>&nbsp; &nbsp; &nbsp; 16 + 11 = 27</p>
 <p><strong>Answer</strong>: 27</p>
-<h4>Example 2: Convert<strong> </strong>A4<sub>16</sub> to Decimal</h4>
+<h4>Example 2: Convert<strong> </strong>A4&#x2081;&#x2086; to Decimal</h4>
 <ol>
     <li>
         <p>Identify the hex digits:</p>
@@ -335,7 +319,7 @@ In general, in any **base-**\(b\) number system:
     <li>
         <p>Multiply each digit by 16 to the power of its position:</p>
         <ul>
-            <li><strong>A</strong> (10) &times; 16&sup1; = 10 &times; 16 = 160</li>
+            <li><strong>A</strong> &times; 16&sup1; = 10 &times; 16 = 160</li>
             <li><strong>4</strong> &times; 16⁰ = 4 &times; 1 = 4</li>
         </ul>
     </li>
@@ -345,7 +329,7 @@ In general, in any **base-**\(b\) number system:
 </ol>
 <p>&nbsp; &nbsp; &nbsp; 160 + 4 = 164</p>
 <p><strong>Answer</strong>: 164&nbsp;</p>
-<hr />
+---
 <h3>Decimal to Binary</h3>
 <h4>Example 1: Convert Decimal 4067 to Binary</h4>
 <p>We keep dividing by powers of 2, starting from the largest that&rsquo;s less than or equal to 4067:</p>
@@ -362,7 +346,7 @@ In general, in any **base-**\(b\) number system:
 <p>3 &divide; 2 = 1, remainder 1</p>
 <p>1 &divide; 1 = 1, remainder 0</p>
 <p>Collecting the <strong>quotients</strong> (the &ldquo;1&rdquo; or &ldquo;0&rdquo; in each step) in order, we get the binary digits: 111111100011.</p>
-<p><strong>Answer</strong>: 1111 1110 0011<sub>2</sub></p>
+<p><strong>Answer</strong>: 1111 1110 0011&#x2082;</p>
 <h4>Example 2: Convert Decimal 45 to Binary</h4>
 <p>45 &divide; 32 = 1, remainder 13</p>
 <p>13 &divide; 16 = 0, remainder 13</p>
@@ -370,29 +354,29 @@ In general, in any **base-**\(b\) number system:
 <p>5 &divide; 4 = 1, remainder 1</p>
 <p>1 &divide; 2 = 0, remainder 1</p>
 <p>1 &divide; 1 = 1, remainder 0</p>
-<p>Collecting the quotients (the "1" or "0" in each step) in order, we get the binary digits: <strong>101101</strong></p>
-<p><strong>Answer</strong>:&nbsp; 0010 1101<sub>2</sub> (leading zeros can be added for clarity).</p>
-<hr />
+<p>Collecting the quotients (the "1" or "0" in each step) in order, we get the binary digits: 101101</p>
+<p><strong>Answer</strong>:&nbsp; 0010 1101&#x2082; (leading zeros can be added for clarity).</p>
+---
 <h3>Binary to Decimal</h3>
 <p><strong>General Steps</strong></p>
 <ol>
     <li>Multiply each binary digit (bit) by 2 raised to its position index (starting from 0 on the right).</li>
     <li>Add all these products together to get the decimal number.</li>
 </ol>
-<h4>Example 1: Convert 0010 1101<sub>2</sub>&nbsp;to Decimal</h4>
+<h4>Example 1: Convert 0010 1101&#x2082; to Decimal</h4>
 <p>Calculation:</p>
-<p>(0 &times; 2<sup>7</sup>) + (0 &times; 2<sup>6</sup>) + (1 &times; 2<sup>5</sup>) + (0 &times; 2<sup>4</sup>) + (1 &times; 2<sup>3</sup>) + (1 &times; 2<sup>2</sup>) + (0 &times; 2<sup>1</sup>) + (1 &times; 2<sup>0</sup>)<br />= (0 &times; 128) + (0 &times; 64) + (1 &times; 32) + (0 &times; 16) + (1 &times; 8) + (1 &times; 4) + (0 &times; 2) + (1 &times; 1)<br />= 0 + 0 + 32 + 0 + 8 + 4 + 0 + 1 = 45</p>
+<p>(0 &times; 2&#x2077;) + (0 &times; &#x2076;) + (1 &times; 2&#x2075;) + (0 &times; 2&#x2074;) + (1 &times; 2&#x00b3;) + (1 &times; 2&#x00b2;) + (0 &times; 2&#x00b9;) + (1 &times; 2&#x2070;)<br />= (0 &times; 128) + (0 &times; 64) + (1 &times; 32) + (0 &times; 16) + (1 &times; 8) + (1 &times; 4) + (0 &times; 2) + (1 &times; 1)<br />= 0 + 0 + 32 + 0 + 8 + 4 + 0 + 1 = 45</p>
 <p><strong>Answer</strong>: 45</p>
-<h4>Example 2: Convert 1111<sub>2</sub>&nbsp;to Decimal</h4>
+<h4>Example 2: Convert 1111&#x2082; to Decimal</h4>
 <ul>
     <li>Bits: 1 1 1 1 (from left to right, that&rsquo;s positions 3, 2, 1, 0)</li>
 </ul>
 <p>Calculation:</p>
-<p>(1 &times; 2<sup>3</sup>) + (1 &times; 2<sup>2</sup>) + (1 &times; 2<sup>1</sup>) + (1 &times; 2<sup>0</sup>)<br />= (1 &times; 8) + (1 &times; 4) + (1 &times; 2) + (1 &times; 1) = 8 + 4 + 2 + 1 = 15</p>
+<p>(1 &times; 2&#x00B3;) + (1 &times; 2&#x00B2;) + (1 &times; 2&#x00B9;) + (1 &times; 2&#x2070;)<br />= (1 &times; 8) + (1 &times; 4) + (1 &times; 2) + (1 &times; 1) = 8 + 4 + 2 + 1 = 15</p>
 <p><strong>Answer</strong>: 15</p>
-<hr />
+---
 <h3>Hexadecimal to Binary</h3>
-<h4>Example 1: Convert 1B<sub>16</sub>&nbsp;to Binary</h4>
+<h4>Example 1: Convert 1B&#x00B9;&#x2076; to Binary</h4>
 <ol>
     <li>
         <p>Split into individual hex digits:</p>
@@ -413,8 +397,8 @@ In general, in any **base-**\(b\) number system:
     </li>
 </ol>
 <p>&nbsp; &nbsp; &nbsp; 0001 1011</p>
-<p><strong>Answer</strong>: 0001 1011<sub>2</sub></p>
-<h4>Example 2: Convert A4<sub>16</sub>&nbsp;to Binary</h4>
+<p><strong>Answer</strong>: 0001 1011&#x2082;</p>
+<h4>Example 2: Convert A4&#x00B9;&#x2076; to Binary</h4>
 <ol>
     <li>
         <p><strong>Split into individual hex digits</strong>:</p>
@@ -434,11 +418,11 @@ In general, in any **base-**\(b\) number system:
         <p><strong>Combine the two 4-bit groups</strong>:</p>
     </li>
 </ol>
-<p>&nbsp; &nbsp; &nbsp; 1010 0100</p>
-<p><strong>Answer</strong>: 10100100<sub>2</sub></p>
-<hr />
+<p>&nbsp; &nbsp; &nbsp; 10100100</p>
+<p><strong>Answer</strong>: 1010 0100&#x2082;</p>
+---
 <h3>Binary to Hexadecimal</h3>
-<h4>Example 1: Convert 11001110<sub>2</sub>&nbsp;to Hexadecimal</h4>
+<h4>Example 1: Convert 1100 1110&#x2082; to Hexadecimal</h4>
 <ol>
     <li>Split into groups of 4 bits (right to left):
         <ul>
@@ -452,8 +436,8 @@ In general, in any **base-**\(b\) number system:
         </ul>
     </li>
 </ol>
-<p><strong>Answer</strong>: CE<sub>16</sub></p>
-<h4>Example 2: Convert 1111011000<sub>2</sub>&nbsp;to Hexadecimal</h4>
+<p><strong>Answer</strong>: CE&#x2081;&#x2086; </p>
+<h4>Example 2: Convert 1111011000&#x2082; to Hexadecimal</h4>
 <ol>
     <li>Split into groups of 4 bits (right to left). Add leading zeros if needed:
         <ul>
@@ -468,4 +452,4 @@ In general, in any **base-**\(b\) number system:
         </ul>
     </li>
 </ol>
-<p><strong>Answer</strong>:<strong> </strong>3D8<sub>16</sub></p>
+**Answer:** 3D8&#x2081;&#x2086;
