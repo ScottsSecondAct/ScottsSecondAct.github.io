@@ -3,7 +3,6 @@ layout: post
 title: Number Systems
 tags: number-systems
 ---
-## Number Systems
 
 Number systems form the foundation of all numerical representations in computing, mathematics, and everyday life. They define how numbers are written, interpreted, and manipulated across different contexts. Each number system operates on a specific base and follows a unique set of rules for representing values.
 
