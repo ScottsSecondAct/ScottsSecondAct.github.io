@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Initial Post
+tags: about
 ---
 
 ## Introduction

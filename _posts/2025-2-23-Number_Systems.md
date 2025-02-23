@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Number Systems
+tags: number-systems
 ---
+## Number Systems
 
 Number systems form the foundation of all numerical representations in computing, mathematics, and everyday life. They define how numbers are written, interpreted, and manipulated across different contexts. Each number system operates on a specific base and follows a unique set of rules for representing values.
 
@@ -15,7 +17,7 @@ Understanding number systems is essential in fields like computer science, elect
 
 <hr/>
 
- 
+
 ## Decimal Number System
 
 The **Hindu-Arabic** or **decimal number system** is a **positional** base-10 system. This means:
