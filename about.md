@@ -26,6 +26,7 @@ I'm a computer and software engineer who has always dreamed of teaching.  After 
 * **Edge AI**
   * Next-Generation Healthcare Devices: Research on real-time disease monitoring and management tools, such as artificial pancreas systems that autonomously regulate insulin levels and advanced wearable devices that provide continuous health insights.
   * Brain-Computer Interfaces (BCIs): Explore devices that link the human brain with edge-based AI hardware/software to treat neurological conditions and restore lost motor function (e.g., stroke rehabilitation), offering more responsive and personalized care.
+  * Ultra-low-cost point-of-care (POC) devices that require minimal infrastructure and little or no electricity to enable Community Health Care Workers(PHC) to diagnose diseases quickly in rural, resource-limited regions of the world.
 * **Deep Learning**
   * Computer Vision: Investigation of state-of-the-art visual recognition and interpretation techniques, particularly for applications like medical imaging diagnostics, automated anomaly detection, and advanced object recognition.
   * Healthcare Applications: Develop deep learning models for predictive analytics, personalized treatment planning, early disease detection, and optimizing patient outcomes.
