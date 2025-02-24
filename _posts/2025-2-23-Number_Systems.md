@@ -84,6 +84,13 @@ In general, in any **base-**\(b\) number system:
 * The available digits range from **0** to \(b - 1\).
 * A number is written using positional notation, where each digit represents a power of the base.
 
+### Hexadecimal Numbers are written in several ways
+
+* A prefix of **0x** indicates that the following digits are hexadecimal, a convention used in Python and many other programming languages.
+  * For example: 0x3FE
+* A subscript of "&#x2081;&#x2086;" following the digits indicates a hexadecimal number.
+  * For example: 3FE&#x2081;&#x2086;
+
 ---
 
 ## Conversion Between Number Systems
@@ -270,7 +277,7 @@ In general, in any **base-**\(b\) number system:
 
 **Step 2:** Divide 27 by 16&sup1; (which is 16).
 
- * 27 &divide; 16 = 1 remainder 11</li>
+* 27 &divide; 16 = 1 remainder 11
 
 **Step 3:** Take the remainder (11) and divide by 16⁰ (which is 1).
 
@@ -298,7 +305,7 @@ Putting it all together, the hexadecimal&nbsp;digits are 1 (from the second step
 
 * 2 &divide; 16 = 0 remainder 2 (since 2 is smaller than 16)
 
-**Step 4**: Take the remainder (2) and divide by 16&#x2070 (which is 1).
+**Step 4**: Take the remainder (2) and divide by 16&#x2070; (which is 1).
 
 * 2 &divide; 1 = 2 remainder 0
 
