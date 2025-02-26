@@ -1,0 +1,14 @@
+<!-- _includes/sidebar.html -->
+<div class="sidebar">
+  <h3>Tags</h3>
+  <ul>
+    {% for tag in site.tags %}
+      <!-- tag[0] is the tag name; tag[1] is the array of posts -->
+      <li>
+        <!-- The slugify filter makes the tag safe for URLs -->
+        <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}/">{{ tag[0] }}</a>
+        ({{ tag[1].size }})
+      </li>
+    {% endfor %}
+  </ul>
+</div>
