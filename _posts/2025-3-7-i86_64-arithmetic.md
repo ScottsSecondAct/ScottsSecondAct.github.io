@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A Guide to x64 Arithmetic Instructions
-tags: computer_engineering, computer_science, assembly_language
+tags: computer_engineering computer_science assembly_language
 ---
 
 ## Table of Contents
