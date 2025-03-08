@@ -62,7 +62,7 @@ plugins:
 
 author:
   name   : "Scott Davis"
-  avatar : "/assets/images/headshot.jpg"
+  avatar : https://raw.githubusercontent.com/ScottsSecondAct/scottssecondact.github.io/master/assets/images/headshot.jpg
   bio    : "Educator, Computer Engineer, and Computer Scientist with a passion for teaching and learning."
   links:
     - label: "Website"
