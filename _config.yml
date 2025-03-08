@@ -22,6 +22,8 @@ github_username: username
 
 search: true
 
+baseurl: /ScottsSecondAct
+
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
