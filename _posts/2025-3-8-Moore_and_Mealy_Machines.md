@@ -32,14 +32,14 @@ In Moore machines, the current output is determined solely by the current state 
 
 #### Formal Definition
 
-A Moore machine is a 6-tuple \( M = (S, s_0, \Sigma, O, \delta, G) \):
+A Moore machine is a 6-tuple:
 
-- \( S \): Finite set of states.
-- \( s_0 \): Initial state, \( s_0 \in S \).
-- \( \Sigma \): Finite set of input symbols (alphabet).
-- \( O \): Finite set of output symbols (alphabet).
-- \( \delta \): State transition function, \( \delta: S \times \Sigma \rightarrow S \).
-- \( G \): Output function, \( G: S \rightarrow O \).
+- ![S](/assets/images/S.svg): Finite set of states.
+- ![S0](/assets/images/s-sub-0.svg): Initial state, ![Equation](/assets/images/S0inS.svg)
+- ![Σ](/assets/images/Sigma.svg): Finite set of input symbols (alphabet).
+- ![O](/assets/images/Capital_O.svg): Finite set of output symbols (alphabet).
+- ![δ](/assets/images/lowercase-delta.svg): State transition function,  δ: S x Σ C S.
+- ![G](https://latex.codecogs.com/svg.image?G): Output function, ![G: S → O](https://latex.codecogs.com/svg.image?G:S\rightarrow&space;O).
 
 #### Properties
 
