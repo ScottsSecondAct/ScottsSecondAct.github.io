@@ -22,7 +22,7 @@ github_username: username
 
 search: true
 
-baseurl: /ScottsSecondAct
+baseurl: /
 
 # Build settings
 markdown: kramdown
