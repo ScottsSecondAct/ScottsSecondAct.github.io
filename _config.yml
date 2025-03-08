@@ -62,7 +62,7 @@ plugins:
 
 author:
   name   : "Scott Davis"
-  avatar : "/assets/images/headshot.jpg"
+  avatar : "assets/images/HeadShot.JPG"
   bio    : "Educator, Computer Engineer, and Computer Scientist with a passion for teaching and learning."
   links:
     - label: "Website"
