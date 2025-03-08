@@ -22,7 +22,7 @@ github_username: username
 
 search: true
 
-baseurl: /
+url: "https://scottssecondact.github.io" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
