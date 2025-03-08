@@ -1,8 +1,14 @@
 ---
-layout: post
 title: A Guide to x64 Arithmetic Instructions
-tags: computer_engineering computer_science assembly_language
+categories:
+  - Blog
+tags:
+  - Computer Engineering
+  - Computer Science
+  - x86_64
+  - Assembly Language
 ---
+This guide is a deep dive into the arithmetic capabilities of modern x86_64 processors, covering integer operations at the assembly level.
 
 ## Table of Contents
 

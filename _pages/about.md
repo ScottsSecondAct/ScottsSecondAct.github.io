@@ -1,11 +1,10 @@
 ---
-layout: page
 title: About
 permalink: /about/
 ---
 ![Scott's Image](https://avatars.githubusercontent.com/u/89648717?v=4)  
 
-I'm a computer and software engineer who has always dreamed of teaching.  After a career in industry, I've transitioned to teaching and research.  I could not be happier.
+I'm an Educator, Computer Engineer, and Computer Scientist with a passion for teaching and learning.  I'm always striving to master and teach cutting-edge technology while balancing intellectual curiosity with practical application.
 
 ### More Information
 
