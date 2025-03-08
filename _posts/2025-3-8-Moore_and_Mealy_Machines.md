@@ -38,7 +38,7 @@ A Moore machine is a 6-tuple:
 - ![S0](/assets/images/s-sub-0.svg): Initial state, ![Equation](/assets/images/S0inS.svg)
 - ![Σ](/assets/images/Sigma.svg): Finite set of input symbols (alphabet).
 - ![O](/assets/images/Capital_O.svg): Finite set of output symbols (alphabet).
-- ![δ](/assets/images/lowercase-delta.svg): State transition function,  δ: S x Σ C S.
+- ![δ](/assets/images/lowercase-delta.svg): State transition function,  ![δ: S x Σ C S](https://latex.codecogs.com/svg.image?\delta:S\times\Sigma\rightarrow&space;S).
 - ![G](https://latex.codecogs.com/svg.image?G): Output function, ![G: S → O](https://latex.codecogs.com/svg.image?G:S\rightarrow&space;O).
 
 #### Properties
