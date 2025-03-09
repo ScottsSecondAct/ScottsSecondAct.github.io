@@ -106,11 +106,11 @@ coming soon
 
 ### Examples
 
-- States: S0, S1, S2
-- Inputs: 1-bit Input_X
-- Outputs: 1-bit Output_Y
-
 #### Moore Machine Example
+
+- States: S0, S1, S2
+- Inputs: 1-bit Input
+- Outputs: 1-bit Output
 
 ##### State Table
 
