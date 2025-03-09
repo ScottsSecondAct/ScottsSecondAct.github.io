@@ -8,9 +8,8 @@ tags:
   - State Machines
   - Verilog
 ---
-Finite State Machines (FSMs) are computational models used to represent and control the behavior of systems through states and transitions. They’re widely used in areas such as digital circuit design, compiler design, communication protocols, and software modeling.
+Finite State Machines (FSMs) are computational models used to represent and control the behavior of systems through states and transitions. They’re widely used in areas such as digital circuit design, compiler design, communication protocols, and software modeling.  This post describes two fundamental types of FSMs: the Moore machine and the Mealy machine
 
-[Moore and Mealy Machines](#moore-and-mealy-machines)
 - [Moore and Mealy Machines](#moore-and-mealy-machines)
   - [Moore Machines](#moore-machines)
     - [Formal Definition](#formal-definition)
@@ -20,14 +19,14 @@ Finite State Machines (FSMs) are computational models used to represent and cont
     - [Formal Definition](#formal-definition-1)
     - [Properties](#properties-1)
     - [State Diagram Representation](#state-diagram-representation-1)
-    - [Key Differences](#key-differences)
-  - [4. Example Comparison](#4-example-comparison)
+  - [Key Differences](#key-differences)
+  - [Example Comparison](#example-comparison)
     - [Moore Machine Example](#moore-machine-example)
       - [State Table](#state-table)
       - [Verilog Implementation](#verilog-implementation)
     - [Mealy Machine Example](#mealy-machine-example)
-  - [5. Practical Applications](#5-practical-applications)
-  - [6. Summary](#6-summary)
+  - [Practical Applications](#practical-applications)
+  - [Summary](#summary)
 
 
 An FSM consists of:
@@ -41,11 +40,6 @@ An FSM consists of:
 FSMs can be represented visually using state diagrams, with circles representing states, arrows denoting transitions, and labeled inputs/outputs.
 
 ## Moore and Mealy Machines
-
-Two fundamental types of FSMs are:
-
-- **Moore Machines**
-- **Mealy Machines**
 
 ### Moore Machines
 
@@ -93,7 +87,7 @@ A Mealy machine is a 6-tuple:
 
 #### State Diagram Representation
 
-#### Key Differences
+### Key Differences
 
 | Feature                 | Moore Machine                     | Mealy Machine                          |
 |-------------------------|-----------------------------------|----------------------------------------|
@@ -105,7 +99,7 @@ A Mealy machine is a 6-tuple:
 
 ---
 
-### 4. Example Comparison
+### Example Comparison
 
 - States: S0, S1, S2
 - Inputs: 1-bit Input_X
@@ -292,7 +286,7 @@ A Mealy machine example: Outputs `1` whenever input transitions from `0` to `1`.
 | B             | 0     | A          | 0      |
 | B             | 1     | B          | 0      |
 
-### 5. Practical Applications
+### Practical Applications
 
 - **Moore Machines**:
   - Traffic light control systems
@@ -304,7 +298,7 @@ A Mealy machine example: Outputs `1` whenever input transitions from `0` to `1`.
   - Data transmission and encoding systems
   - Signal edge detection in digital circuits
 
-### 6. Summary
+### Summary
 
 - **Moore Machines** have state-based outputs, simpler to understand but may require more states.
 - **Mealy Machines** have transition-based outputs, allowing fewer states and faster reactions, but slightly more complex logic.
