@@ -150,6 +150,115 @@ always @(*) begin
 end
 
 endmodule
+
+// Testbench
+module moore_fsm_tb;
+
+// Inputs
+reg clk;
+reg reset;
+reg in;
+
+// Outputs
+wire out;
+
+// Instantiate the Unit Under Test (UUT)
+moore_fsm uut (
+    .clk(clk),
+    .reset(reset),
+    .in(in),
+    .out(out)
+);
+
+// Clock generation (10 ns period)
+initial begin
+    clk = 0;
+    forever #5 clk = ~clk;
+end
+
+// Dump waveforms for post-simulation analysis
+ initial begin
+    $dumpfile("moore_fsm_tb.vcd");
+    $dumpvars(0, moore_fsm_tb);
+end
+
+    // Reset task
+task apply_reset;
+    input [31:0] duration;
+    begin
+        reset = 1;
+        #duration;
+        reset = 0;
+    end
+endtask
+
+initial begin
+    // Initialize Inputs
+    in = 0;
+    apply_reset(10);  // Apply reset for 10 ns
+
+    // Wait for a clock edge after reset deassertion
+    @(negedge clk);
+
+    // Test Sequence with self-checking
+    // Initiallin in S0, expected output = 0
+    in = 0;
+    @(negedge clk);
+    if (out !== 0) $display("Error at time %0t", $time);
+
+    // Transition to S1, expecting output = 1
+    in = 1;
+    @(negedge clk);
+    if (out !== 1) $display("Error at time %0t", $time);
+
+    // Stay in S1, expecting output = 1
+    in = 1;
+    @(negedge clk);
+    if (out !== 1) $display("Error at time %0t", $time);
+
+    // Transition to S2, expecting output = 0
+    in = 0;
+    @(negedge clk);
+    if (out !== 0) $display("Error at time %0t", $time);
+
+    // Transition to S0, expecting output = 0
+    in = 0;
+    @(negedge clk);
+    if (out !== 0) $display("Error at time %0t", $time);
+
+    // Transition to S1, expecting output = 1
+    in = 1;
+    @(negedge clk);
+    if (out !== 1) $display("Error at time %0t", $time);
+
+    // Transition to S2, expecting output = 0
+    in = 0;
+    @(negedge clk);
+    if (out !== 0) $display("Error at time %0t", $time);
+
+    // Stay in S2, expecting output = 0
+    in = 1;
+    @(negedge clk);
+    if (out !== 0) $display("Error at time %0t", $time);
+
+    // Return to S0, expecting output = 0
+    in = 0;
+    @(negedge clk);
+    if (out !== 0) $display("Error at time %0t", $time);
+
+    // End simulation after test completion
+    #10;
+    $display("Test completed at time %0t", $time);
+    $finish;
+end
+
+    // Monitor outputs continuously
+initial begin
+    $monitor("Time=%0t | reset=%b | in=%b | state=%b | out=%b",
+        $time, reset, in, uut.state, out);
+end
+
+endmodule
 {% endhighlight %}
 
 #### Mealy Machine Example
