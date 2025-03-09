@@ -34,17 +34,17 @@ In Moore machines, the current output is determined solely by the current state 
 
 A Moore machine is a 6-tuple:
 
-- ![S](/assets/images/S.svg): Finite set of states.
-- ![S0](/assets/images/s-sub-0.svg): Initial state, ![Equation](/assets/images/S0inS.svg)
-- ![Σ](/assets/images/Sigma.svg): Finite set of input symbols (alphabet).
-- ![O](/assets/images/Capital_O.svg): Finite set of output symbols (alphabet).
-- ![δ](/assets/images/lowercase-delta.svg): State transition function,  ![δ: S x Σ C S](https://latex.codecogs.com/svg.image?\delta:S\times\Sigma\rightarrow&space;S).
+- ![S](https://latex.codecogs.com/svg.image?&space;S): Finite set of states.
+- ![S0](https://latex.codecogs.com/svg.image?&space;S_0): Initial state, ![S0 in S](https://latex.codecogs.com/svg.image?&space;S_0\in&space;S)
+- ![Σ](https://latex.codecogs.com/svg.image?\Sigma): Finite set of input symbols (alphabet).
+- ![O](https://latex.codecogs.com/svg.image?O): Finite set of output symbols (alphabet).
+- ![δ](https://latex.codecogs.com/svg.image?\delta): State transition function,  ![δ: S x Σ → S](https://latex.codecogs.com/svg.image?\delta:S\times\Sigma\rightarrow&space;S).
 - ![G](https://latex.codecogs.com/svg.image?G): Output function, ![G: S → O](https://latex.codecogs.com/svg.image?G:S\rightarrow&space;O).
 
 #### Properties
 
-- Output depends only on the current state.
-- Often requires more states compared to Mealy machines.
+- The output depends only on the current state.
+- They often require more states compared to Mealy machines.
 
 #### State Diagram Representation
 
@@ -56,30 +56,21 @@ In Mealy machines, the output depends on both the current state and the current 
 
 #### Formal Definition
 
-A Mealy machine is a 6-tuple \( M = (Q, \Sigma, \Delta, \delta, \lambda, q_0) \):
+A Mealy machine is a 6-tuple:
 
-- \( Q \): Finite set of states.
-- \( \Sigma \): Finite set of input symbols (alphabet).
-- \( \Delta \): Finite set of output symbols.
-- \( \delta \): State transition function, \( \delta: Q \times \Sigma \rightarrow Q \).
-- \( \lambda \): Output function, \( \lambda: Q \times \Sigma \rightarrow \Delta \).
-- \( q_0 \): Initial state, \( q_0 \in Q \).
+- ![S](https://latex.codecogs.com/svg.image?&space;S): Finite set of states.
+- ![S0](https://latex.codecogs.com/svg.image?&space;S_0): Initial state, ![S0 in S](https://latex.codecogs.com/svg.image?&space;S_0\in&space;S)
+- ![Σ](https://latex.codecogs.com/svg.image?\Sigma): Finite set of input symbols (alphabet).
+- ![O](https://latex.codecogs.com/svg.image?O): Finite set of output symbols (alphabet).
+- ![δ](https://latex.codecogs.com/svg.image?\delta): State transition function,  ![δ: S x Σ → S](https://latex.codecogs.com/svg.image?\delta:S\times\Sigma\rightarrow&space;S).
+- ![G](https://latex.codecogs.com/svg.image?G): Output function, ![G:  Sx Σ → O](https://latex.codecogs.com/svg.image?G:S\times\Sigma\rightarrow&space;O).
 
 #### Properties
 
-- Output depends on both current state and input.
-- Usually requires fewer states compared to Moore machines.
+- The output depends on both current state and input.
+- They often require fewer states compared to Moore machines.
 
 #### State Diagram Representation
-
-State diagram for a Mealy machine:
-
-   input/output
-       |
-       v
-+------------+
-|  State A   |
-+------------+
 
 #### Key Differences
 
@@ -95,19 +86,73 @@ State diagram for a Mealy machine:
 
 ### 4. Example Comparison
 
-#### Moore Machine Example:
+- States: S0, S1, S2
+- Inputs: 1-bit Input_X
+- Outputs: 1-bit Output_Y
 
-Consider a Moore machine that outputs `1` when the number of `1` inputs seen so far is even, and outputs `0` otherwise.
+#### Moore Machine Example
 
-- States: Even (E), Odd (O)
-- Outputs: State E → `1`, State O → `0`
+##### State Table
 
-| Current State | Input | Next State | Output |
-|---------------|-------|------------|--------|
-| E             | 0     | E          | 1      |
-| E             | 1     | O          | 1      |
-| O             | 0     | O          | 0      |
-| O             | 1     | E          | 0      |
+|Current State | Input_X | Next State | Output_Y |
+|--------------|-------|------------|--------|
+| S0 | 0 | S0 | 0 |
+| S0 | 1 | S1 | 0 |
+| S1 | 0 | S2 | 1 |
+| S1 | 1 | S1 | 1 |
+| S2 | 0 | S0 | 0 |
+| S2 | 1 | S2 | 0 |
+
+##### Verilog Implementation
+
+{% highlight Verilog %}
+module moore_fsm (
+    input clk,
+    input reset,
+    input in,
+    output reg out
+);
+
+typedef enum logic [1:0] {S0, S1, S2} state_t;
+state, next_state;
+
+reg [1:0] state, next_state;
+
+// State encoding
+localparam S0 = 2'b00, 
+           S1 = 2'b01, 
+           S2 = 2'b10;
+
+// Sequential logic (state register)
+always @(posedge clk or posedge reset) begin
+    if (reset)
+        state <= S0;
+    else
+        state <= next_state;
+end
+
+// Combinational logic (next state logic)
+always @(*) begin
+    case(state)
+        S0: next_state = (input_signal) ? S1 : S0;
+        S1: next_state = input_signal ? S1 : S2;
+        S2: next_state = input ? S2 : S0;
+        default: next_state = S0;
+    endcase
+end
+
+// Output logic (Moore output depends only on the current state)
+always @(*) begin
+    case (state)
+        S0: out = 1'b0;
+        S1: out = 1'b1;
+        S2: out = 1'b0;
+        default: out = 1'b0;
+    endcase
+end
+
+endmodule
+{% endhighlight %}
 
 #### Mealy Machine Example
 
