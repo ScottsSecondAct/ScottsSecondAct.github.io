@@ -125,6 +125,8 @@ coming soon
 
 ##### State Diagram
 
+![Moore Machine State Diagram](/assets/images/moore-machine.png)
+
 ##### Verilog Implementation
 
 {% highlight Verilog %}
