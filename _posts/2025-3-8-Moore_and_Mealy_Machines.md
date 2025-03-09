@@ -10,6 +10,8 @@ tags:
 ---
 Finite State Machines (FSMs) are computational models used to represent and control the behavior of systems through states and transitions. They’re widely used in areas such as digital circuit design, compiler design, communication protocols, and software modeling.
 
+[[_TOC_]]
+
 An FSM consists of:
 
 - **States:** Defined configurations representing various possible situations the system can be in.
