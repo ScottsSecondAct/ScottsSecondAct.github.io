@@ -10,7 +10,25 @@ tags:
 ---
 Finite State Machines (FSMs) are computational models used to represent and control the behavior of systems through states and transitions. They’re widely used in areas such as digital circuit design, compiler design, communication protocols, and software modeling.
 
-[[_TOC_]]
+[Moore and Mealy Machines](#moore-and-mealy-machines)
+- [Moore and Mealy Machines](#moore-and-mealy-machines)
+  - [Moore Machines](#moore-machines)
+    - [Formal Definition](#formal-definition)
+    - [Properties](#properties)
+    - [State Diagram Representation](#state-diagram-representation)
+  - [Mealy Machines](#mealy-machines)
+    - [Formal Definition](#formal-definition-1)
+    - [Properties](#properties-1)
+    - [State Diagram Representation](#state-diagram-representation-1)
+    - [Key Differences](#key-differences)
+  - [4. Example Comparison](#4-example-comparison)
+    - [Moore Machine Example](#moore-machine-example)
+      - [State Table](#state-table)
+      - [Verilog Implementation](#verilog-implementation)
+    - [Mealy Machine Example](#mealy-machine-example)
+  - [5. Practical Applications](#5-practical-applications)
+  - [6. Summary](#6-summary)
+
 
 An FSM consists of:
 
