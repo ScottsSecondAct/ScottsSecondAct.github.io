@@ -68,6 +68,9 @@ A Moore machine is a 6-tuple:
 
 ![Moore Machine State Diagram](/assets/images/moore-machine.png)
 
+- The input is represented with each transition.
+- The output is represented with each state.
+
 ### Mealy Machines
 
 In Mealy machines, the output depends on both the current state and the current input. Hence, outputs are associated with transitions rather than states.
