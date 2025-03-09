@@ -6,6 +6,7 @@ tags:
   - Computer Engineering
   - Digital Logic
   - State Machines
+  - Verilog
 ---
 Finite State Machines (FSMs) are computational models used to represent and control the behavior of systems through states and transitions. They’re widely used in areas such as digital circuit design, compiler design, communication protocols, and software modeling.
 
@@ -113,14 +114,11 @@ module moore_fsm (
     output reg out
 );
 
-typedef enum logic [1:0] {S0, S1, S2} state_t;
-state, next_state;
-
 reg [1:0] state, next_state;
 
 // State encoding
-localparam S0 = 2'b00, 
-           S1 = 2'b01, 
+localparam S0 = 2'b00,
+           S1 = 2'b01,
            S2 = 2'b10;
 
 // Sequential logic (state register)
@@ -134,9 +132,9 @@ end
 // Combinational logic (next state logic)
 always @(*) begin
     case(state)
-        S0: next_state = (input_signal) ? S1 : S0;
-        S1: next_state = input_signal ? S1 : S2;
-        S2: next_state = input ? S2 : S0;
+        S0: next_state = in ? S1 : S0;
+        S1: next_state = in ? S1 : S2;
+        S2: next_state = in ? S2 : S0;
         default: next_state = S0;
     endcase
 end
