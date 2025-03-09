@@ -66,7 +66,7 @@ A Moore machine is a 6-tuple:
 
 #### State Diagram Representation
 
-coming soon
+![Moore Machine State Diagram](/assets/images/moore-machine.png)
 
 ### Mealy Machines
 
