@@ -21,9 +21,10 @@ Finite State Machines (FSMs) are computational models used to represent and cont
     - [Properties](#properties-1)
     - [State Diagram Representation](#state-diagram-representation-1)
   - [Key Differences](#key-differences)
-  - [Example Comparison](#example-comparison)
+  - [Examples](#examples)
     - [Moore Machine Example](#moore-machine-example)
       - [State Table](#state-table)
+      - [State Diagram](#state-diagram)
       - [Verilog Implementation](#verilog-implementation)
     - [Mealy Machine Example](#mealy-machine-example)
   - [Practical Applications](#practical-applications)
@@ -103,7 +104,7 @@ coming soon
 
 ---
 
-### Example Comparison
+### Examples
 
 - States: S0, S1, S2
 - Inputs: 1-bit Input_X
@@ -113,7 +114,7 @@ coming soon
 
 ##### State Table
 
-|Current State | Input_X | Next State | Output_Y |
+|Current State | Input | Next State | Output |
 |--------------|-------|------------|--------|
 | S0 | 0 | S0 | 0 |
 | S0 | 1 | S1 | 0 |
@@ -121,6 +122,8 @@ coming soon
 | S1 | 1 | S1 | 1 |
 | S2 | 0 | S0 | 0 |
 | S2 | 1 | S2 | 0 |
+
+##### State Diagram
 
 ##### Verilog Implementation
 
@@ -289,11 +292,18 @@ coming soon
   - Traffic light control systems
   - Vending machines with outputs dependent on internal state (e.g., current amount of money inserted)
   - Control logic circuits
+  - Digital locks and security systems
+  - Elevator control systems
+  - Game states
+  - Industrial controllers
 
 - **Mealy Machines**:
   - Real-time communication protocols
   - Data transmission and encoding systems
   - Signal edge detection in digital circuits
+  - Interactive User Interfaces
+  - Real-time control systems
+  - Error detection and correction
 
 ### Summary
 
