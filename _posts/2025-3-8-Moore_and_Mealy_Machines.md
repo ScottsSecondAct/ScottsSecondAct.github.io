@@ -10,6 +10,7 @@ tags:
 ---
 Finite State Machines (FSMs) are computational models used to represent and control the behavior of systems through states and transitions. They’re widely used in areas such as digital circuit design, compiler design, communication protocols, and software modeling.  This post describes two fundamental types of FSMs: the Moore machine and the Mealy machine
 
+- [Finite State Machines](#finite-state-machines)
 - [Moore and Mealy Machines](#moore-and-mealy-machines)
   - [Moore Machines](#moore-machines)
     - [Formal Definition](#formal-definition)
@@ -28,6 +29,7 @@ Finite State Machines (FSMs) are computational models used to represent and cont
   - [Practical Applications](#practical-applications)
   - [Summary](#summary)
 
+## Finite State Machines
 
 An FSM consists of:
 
@@ -63,7 +65,7 @@ A Moore machine is a 6-tuple:
 
 #### State Diagram Representation
 
-![Alternative Text](/assets/images/Moore-Automat-en.svg)
+coming soon
 
 ### Mealy Machines
 
@@ -86,6 +88,8 @@ A Mealy machine is a 6-tuple:
 - They often require fewer states compared to Moore machines.
 
 #### State Diagram Representation
+
+coming soon
 
 ### Key Differences
 
@@ -277,14 +281,7 @@ endmodule
 
 #### Mealy Machine Example
 
-A Mealy machine example: Outputs `1` whenever input transitions from `0` to `1`.
-
-| Current State | Input | Next State | Output |
-|---------------|-------|------------|--------|
-| A             | 0     | A          | 0      |
-| A             | 1     | B          | 1      |
-| B             | 0     | A          | 0      |
-| B             | 1     | B          | 0      |
+coming soon
 
 ### Practical Applications
 
