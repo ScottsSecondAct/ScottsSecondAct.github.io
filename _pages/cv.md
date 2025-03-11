@@ -1,7 +1,7 @@
 ---
-title: "Projects"
-layout: projects
-permalink: /projects/
+title: "CV"
+layout: cv
+permalink: /cv/
 author_profile: true
 ---
 ## Contact Information
