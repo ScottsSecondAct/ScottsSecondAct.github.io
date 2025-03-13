@@ -5,9 +5,10 @@ permalink: /cv/
 name: "Scott Davis"
 author_profile: true
 ---
+
 ## Contact Information
 
-- <ScottDavis.gv@gmail.com> 
+- <ScottDavis.gv@gmail.com>
 
 ## Digital Portfolio
 
@@ -44,7 +45,7 @@ Computer Engineering | Computer Science | Agile | Scrum | Kanban | FPGA | Embedd
 **Staff Engineer/Technical Lead** | Telestream LLC, Nevada City, CA | 2015 - 2023
 
 - Hired, developed, and led a diverse and talented team of software engineers creating the Live Capture product – the company's highest-grossing ($4M annually) new product.
-- Facilitated a growth and learning culture by staying updated with new programming languages, frameworks, and technologies and sharing insights with the team.  Encouraged the team to look at new technologies, tools, and methods.
+- Facilitated a growth and learning culture by staying updated with new programming languages, frameworks, and technologies and sharing insights with the team. Encouraged the team to look at new technologies, tools, and methods.
 - Championed agile methodologies to ensure on-time delivery of software releases and features.
 - Collaborated cross-functionally with Management, Marketing, Product Management, Operations, QA, ATS, Customer Support, Technical Publications, and adjacent product development groups.
 - Leveraged strong technical skills to develop RESTful and GraphQL APIs, IP Video/Audio ingest and origination, and third-party board interfaces using C++ and C#/.Net.
@@ -62,7 +63,7 @@ Computer Engineering | Computer Science | Agile | Scrum | Kanban | FPGA | Embedd
 ## Education
 
 - Master’s Degree, Computer Science with Distinction | California State University, Chico.
-- Bachelor’s Degree,  Electronic and Computer Engineering | California State University, Chico.
+- Bachelor’s Degree, Electronic and Computer Engineering | California State University, Chico.
 - Mathematics Minor | California State University, Chico
 - Associate Degree, Physical Science | Butte College, Chico
 
@@ -82,7 +83,6 @@ Computer Engineering | Computer Science | Agile | Scrum | Kanban | FPGA | Embedd
 
 - Mentored High School Students, College Students, Interns, and Junior Engineers.
 
- 
 ## Community Involvement
 
 - 49er Breakfast Rotary Club of Nevada City.
