@@ -2,6 +2,7 @@
 title: "CV"
 layout: cv
 permalink: /cv/
+name: "Scott Davis"
 author_profile: true
 ---
 ## Contact Information

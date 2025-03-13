@@ -1,4 +1,91 @@
 ---
 layout: cv
 ---
-{{content}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Optional: link to a dedicated CSS file for styling your CV -->
+    <!-- <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}"> -->
+  </head>
+  <body>
+    <!-- Header / Name / Contact -->
+    <header>
+      <h1>{{ page.name }}</h1>
+      <p>{{ page.job_title }}</p>
+      <p>{{ page.contact_info }}</p>
+    </header>
+
+    <!-- Experience -->
+    {% if page.experience %}
+      <section>
+        <h2>Experience</h2>
+        <ul>
+          {% for exp in page.experience %}
+            <li>
+              <h3>{{ exp.title }} &mdash; {{ exp.company }} ({{ exp.dates }})</h3>
+              <p>{{ exp.description }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    <!-- Education -->
+    {% if page.education %}
+      <section>
+        <h2>Education</h2>
+        <ul>
+          {% for edu in page.education %}
+            <li>
+              <h3>{{ edu.degree }} &mdash; {{ edu.institution }} ({{ edu.dates }})</h3>
+              <p>{{ edu.description }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    <!-- Skills -->
+    {% if page.skills %}
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          {% for skill in page.skills %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    <!-- Projects -->
+    {% if page.projects %}
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          {% for project in page.projects %}
+            <li>
+              <h3>
+                {% if project.url %}
+                  <a href="{{ project.url }}">{{ project.name }}</a>
+                {% else %}
+                  {{ project.name }}
+                {% endif %}
+              </h3>
+              <p>{{ project.description }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    <!-- Footer / Additional Info / Etc. -->
+    {% if page.footer %}
+      <footer>
+        {{ page.footer }}
+      </footer>
+    {% endif %}
+  </body>
+</html>
