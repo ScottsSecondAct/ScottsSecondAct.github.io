@@ -1,97 +1,96 @@
 ---
-title: "CV"
 layout: cv
-permalink: /cv/
+title: "Scott Davis Curriculum Vitae"
 name: "Scott Davis"
-author_profile: true
+
+# Contact & Digital Portfolio
+contact: "Email: ScottDavis.gv@gmail.com | Phone: 530-263-1314"
+digital_portfolio: |
+  [LinkedIn](https://www.linkedin.com/in/scottdavisgv) | 
+  [Blog](https://scottssecondact.github.io/) | 
+  [GitHub](https://github.com/ScottsSecondAct)
+
+skills:
+  - Computer Engineering
+  - Computer Science
+  - Agile, Scrum, Kanban
+  - FPGA, Embedded Systems, Microprocessors
+  - C, C++, C#, Java, Python, JavaScript, TypeScript
+  - Web Dev: HTML, NodeJS, Express, RESTful, GraphQL, gRPC
+  - Databases: Postgres, MongoDB, Redis
+  - Cloud: AWS, Azure
+  - Docker, Kubernetes, CI/CD (Jenkins, TeamCity)
+  - DevOps
+  - Leadership & Mentoring
+  - Public Speaking
+  - University Lecturing
+
+experience:
+  - role: "Lecturer in Computer Science & Computer Engineering"
+    company: "CSU, Sacramento"
+    dates: "2025 - Present"
+    description: "Teach core courses, mentor students, prepare engaging material, and foster a supportive learning environment."
+
+  - role: "Adjunct Professor of Computer Science"
+    company: "Sierra College, Rocklin, CA"
+    dates: "2024 - Present"
+    description: "Teach core CS courses, create course materials, mentor students, supervise honors contracts."
+
+  - role: "Principal Engineer"
+    company: "TechniQuest Associates, Inc., Grass Valley, CA"
+    dates: "2002 - Present"
+    description: "Oversee business operations and develop complex digital hardware, FPGAs, software, and firmware for Broadcast Video & Digital Cinema clients."
+
+  - role: "Staff Engineer / Technical Lead"
+    company: "Telestream LLC, Nevada City, CA"
+    dates: "2015 - 2023"
+    description: "Led a team creating Live Capture (company’s highest-grossing new product). Used C++, C#, .NET, RESTful/GraphQL APIs, IP Video ingest."
+
+  - role: "Volunteer Instructor"
+    company: "Gold Country Computer Learning Center, Grass Valley, CA"
+    dates: "2015"
+    description: "Taught classes for diverse students on using tablets and personal computers."
+
+  - role: "System Software Engineer V"
+    company: "Hewlett-Packard Enterprise, Roseville, CA"
+    dates: "2011 - 2015"
+    description: "Adapted UEFI for x86 Integrity Superdome-X, debugged redundancy subsystems, contributed to mission-critical blade servers."
+
+education:
+  - degree: "Master’s Degree, Computer Science (with Distinction)"
+    institution: "California State University, Chico"
+  - degree: "Bachelor’s Degree, Electronic and Computer Engineering"
+    institution: "California State University, Chico"
+  - degree: "Mathematics Minor"
+    institution: "California State University, Chico"
+  - degree: "Associate Degree, Physical Science"
+    institution: "Butte College, Chico"
+
+organizations:
+  - "Member of the Society of Motion Picture and Television Engineers"
+  - "Member of Upsilon Pi Epsilon Computer Science Honor Society"
+  - "Past Member of IEEE and IEEE Computer Society"
+  - "Past Member of ACM"
+
+volunteer:
+  - "49er Breakfast Rotary Club of Nevada City (Treasurer, committee member, Paul Harris Fellow)"
+  - "Early Risers Toastmasters Club (Competent Communicator, past VP of Membership & Education)"
+
+references:
+  - name: "Stephanie Ortiz"
+    title: "Retired Executive Dean of Sierra College"
+    email: "stortiz1998@gmail.com"
+    phone: "(530) 308-4614"
+  - name: "Brian Thomas"
+    title: "Past VP of Enterprise Engineering at Telestream LLC"
+    email: "bxthomas@gmail.com"
+    phone: "(530) 277-2186"
+  - name: "Peter Brophy"
+    title: "Past Engineering Manager at Telestream LLC"
+    email: "seriesrover@hotmail.com"
+    phone: "(916) 467-6420"
 ---
 
-## Contact Information
+# Scott Davis — CV
 
-- <ScottDavis.gv@gmail.com>
-
-## Digital Portfolio
-
-- LinkedIn: linkedin.com/in/scottdavisgv
-- Blog: scottssecondact.github.io
-- GitHub: github.com/ScottsSecondAct
-
-## Skills
-
-Computer Engineering | Computer Science | Agile | Scrum | Kanban | FPGA | Embedded Systems | Microprocessors | Debuggers | Test Equipment | Digital Video | Front-End Development | Back-End Web Development | Streaming Media | OOP | C# | C/C++ | Java | Python | JavaScript | TypeScript | HTML | Full Stack | .NET Core | NodeJS |Express | RESTful | GraphQL | gRPC | Postgres | MongoDB | Redis | Cloud Computing | AWS | Azure | Unit Test | xUnit | Microservices | SOA | AngularJS | VueJS | ReactJS | NextJS | | Git | Jira | IDEs | DevOps | Docker | Kubernetes | CI/CD | Jenkins | Team City | Network Protocols | TCP/IP | UDP | SNMP | RTP | RTMP | M2TS | SRT | SDI–3G/4K/8K | YouTube and Facebook API | Public Speaking | Leadership | Mentoring | Technical Writing | Higher Education Teaching | University Lecturing |
-
-## Experience
-
-**Lecturer in Computer Science and Computer Engineering** | CSU, Sacramento | | 2025 - Present
-
-- As a Lecturer at CSU, Sacramento, I have the privilege of teaching core Computer Science and Computer Engineering courses, preparing engaging course material, and mentoring students to foster their growth and success in the field. I strived to create a supportive and enriching learning environment for my students, encouraging them to reach their full potential.
-
-**Adjunct Professor of Computer Science** | Sierra College, Rocklin, CA | 2024 - Present
-
-- As an Adjunct Professor at Sierra College in Rocklin, California, I have the privilege of teaching core Computer Science courses, preparing engaging course material, mentoring and counseling students, and supervising Honors Contracts. I strive to create a supportive and enriching learning environment for my students, encouraging their growth and success in Computer Science.
-
-**Principal Engineer** | TechniQuest Associates, Inc., Grass Valley, CA | 2002 to Present
-
-- Responsible for the overall business, including customer acquisition, contracts, profit and loss, and managing a team of engineers and support staff.
-- Developed complex digital hardware, FPGAs, software, and firmware for various Broadcast Video and Digital Cinema Industry clients.
-- Architected a variety of hardware products.
-- Created the Hardware for a Master Control Switcher and a Downstream Keyer for clients.
-- Developed a prototype of a large LCD display using an array of smaller LCD displays for a University client
-- Interfaced with a Security Testing Service to certify portions of a Digital Cinema product for a client.
-- Created embedded software for a variety of clients' products.
-- Programmed in C, C++, Java, and various assembly languages.
-- Designed Xilinx (AMD) and Altera (Intel) based FPGAs using Verilog and ModelSim.
-
-**Staff Engineer/Technical Lead** | Telestream LLC, Nevada City, CA | 2015 - 2023
-
-- Hired, developed, and led a diverse and talented team of software engineers creating the Live Capture product – the company's highest-grossing ($4M annually) new product.
-- Facilitated a growth and learning culture by staying updated with new programming languages, frameworks, and technologies and sharing insights with the team. Encouraged the team to look at new technologies, tools, and methods.
-- Championed agile methodologies to ensure on-time delivery of software releases and features.
-- Collaborated cross-functionally with Management, Marketing, Product Management, Operations, QA, ATS, Customer Support, Technical Publications, and adjacent product development groups.
-- Leveraged strong technical skills to develop RESTful and GraphQL APIs, IP Video/Audio ingest and origination, and third-party board interfaces using C++ and C#/.Net.
-- Architected new systems, subsystems, and features.
-
-**Volunteer Instructor** | Gold Country Computer Learning Center | Grass Valley, CA | 2015.
-
-- Taught diverse classes of students in the use of tablets and personal computers.
-
-**System Software Engineer V** | Hewlett-Packard Enterprise, Roseville, CA | 2011 - 2015
-
-- Adapted the Uniform Extensible Firmware Interface (UEFI) reference code for HPE’s x86 Integrity Superdome-X mission-critical modular bladed server.
-- Debugged and corrected the existing redundancy subsystem for HPE’s Itanium-powered Integrity Server.
-
-## Education
-
-- Master’s Degree, Computer Science with Distinction | California State University, Chico.
-- Bachelor’s Degree, Electronic and Computer Engineering | California State University, Chico.
-- Mathematics Minor | California State University, Chico
-- Associate Degree, Physical Science | Butte College, Chico
-
-## Professional Organizations
-
-- Member of the Society of Motion Picture and Television Engineers
-- Member of the Upsilon Pi Epsilon Computer Science Honor Society
-- Past Member of the Institute of Electrical and Electronic Engineers.
-- Past Member of the IEEE Computer Society.
-- Past Member of the Association of Computing Machinery
-
-## Veteran
-
-- United States Navy | Submarine Service | Performed Ship’s Navigation.
-
-## Mentorship
-
-- Mentored High School Students, College Students, Interns, and Junior Engineers.
-
-## Community Involvement
-
-- 49er Breakfast Rotary Club of Nevada City.
-  - Treasurer.
-  - Member of the International Avenue of Service committee.
-  - Member of the Vocational Avenue of Service committee.
-  - Paul Harris Fellow.
-  - Past Member of the Community Avenue of Service committee.
-- Early Risers Toastmasters Club of Nevada City.
-  - Competent Communicator.
-  - Past Vice President of Membership.
-  - Past Vice President of Education.
+Thank you for visiting my CV page. The sections above are defined in front matter and rendered by the **cv** layout. Feel free to get in touch or explore my [LinkedIn](https://www.linkedin.com/in/scottdavisgv) for the latest updates.
