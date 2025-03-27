@@ -1,113 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Optional: Your CSS or framework of choice -->
-    <!-- <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}"> -->
-  </head>
-  <body>
+---
+layout: cv
+---
 
-    <!-- If your blog uses a global header or navigation, include it here:
-         {% comment %}
-         % include header.html %} (or your partial’s filename)
-         {% endcomment %}
-    -->
+<header>
+  <h1 style="text-align: center">{{ page.title }}</h1>
+</header>
+<hr />
 
-    <header>
-      <h1>{{ page.name }}</h1>
-      {% if page.contact %}
-        <p>{{ page.contact }}</p>
-      {% endif %}
-      {% if page.digital_portfolio %}
-        <p>{{ page.digital_portfolio }}</p>
-      {% endif %}
-    </header>
+<!-- Contact Information Section -->
+{% if page.contact %}
+<section>
+  <h2>Contact Information</h2>
+  <p>{{ page.contact }}</p>
+</section>
 
-    <!-- Skills Section -->
-    {% if page.skills %}
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          {% for skill in page.skills %}
-            <li>{{ skill }}</li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endif %}
+<!-- Digital Portfolio Section -->
+{% endif %} {% if page.digital_portfolio %}
+<h2 class="mt-2 mb-2 font-bold">Digital Portfolio</h2>
+<p>{{ page.digital_portfolio }}</p>
+{% endif %}
 
-    <!-- Experience Section -->
-    {% if page.experience %}
-      <section>
-        <h2>Experience</h2>
-        {% for job in page.experience %}
-          <article>
-            <h3>{{ job.role }} | {{ job.company }}</h3>
-            <p><strong>{{ job.dates }}</strong></p>
-            <p>{{ job.description }}</p>
-          </article>
-        {% endfor %}
-      </section>
-    {% endif %}
+<!-- Skills Section -->
+{% if page.skills %}
+<section class="skills-section">
+  <h2>Skills</h2>
+  <skills class="skills-grid">
+    {% for skill in page.skills %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+  </skills>
+</section>
+{% endif %}
 
-    <!-- Education Section -->
-    {% if page.education %}
-      <section>
-        <h2>Education</h2>
-        <ul>
-          {% for edu in page.education %}
-            <li>
-              <strong>{{ edu.degree }}</strong>, {{ edu.institution }}
-              {% if edu.dates %} ({{ edu.dates }}){% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endif %}
+<!-- Experience Section -->
+{% if page.experience %}
+<section>
+  <h2 class="mt-2 mb-2 font-bold">Experience</h2>
+  {% for job in page.experience %}
+  <article>
+    <h3>{{ job.role }} | {{ job.company }}</h3>
+    <p><strong>{{ job.dates }}</strong></p>
+    <p>{{ job.description }}</p>
+  </article>
+  {% endfor %}
+</section>
+{% endif %}
 
-    <!-- Additional Sections (Organizations, Mentorship, References, etc.) -->
-    {% if page.organizations %}
-      <section>
-        <h2>Professional Organizations</h2>
-        <ul>
-          {% for org in page.organizations %}
-            <li>{{ org }}</li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endif %}
+<!-- Education Section -->
+{% if page.education %}
+<section>
+  <h2 class="mt-2 mb-2 font-bold">Education</h2>
+  <ul>
+    {% for edu in page.education %}
+    <li class="font-semibold">
+      <strong>{{ edu.degree }}</strong> {{ edu.institution }} {{ edu.dates }}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
 
-    {% if page.volunteer %}
-      <section>
-        <h2>Community Involvement</h2>
-        <ul>
-          {% for volunteer in page.volunteer %}
-            <li>{{ volunteer }}</li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endif %}
-
-    {% if page.references %}
-      <section>
-        <h2>References</h2>
-        <ul>
-          {% for reference in page.references %}
-            <li>
-              <strong>{{ reference.name }}</strong>
-              <br>{{ reference.title }}
-              <br>{{ reference.email }}
-              <br>{{ reference.phone }}
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endif %}
-
-    <!-- If your blog uses a global footer, include it here:
-         {% include footer.html %} (or your partial’s filename)
-    -->
-
-  </body>
-</html>
+<!-- Additional Sections (Organizations, Mentorship, References, etc.) -->
+{% if page.organizations %}
+<section>
+  <h2 class="mt-2 mb-2 font-bold">Professional Organizations</h2>
+  <ul>
+    {% for org in page.organizations %}
+    <li>{{ org }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %} {% if page.volunteer %}
+<section>
+  <h2 class="mt-2 mb-2 font-bold">Community Involvement</h2>
+  <ul>
+    {% for volunteer in page.volunteer %}
+    <li>{{ volunteer }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

@@ -26,8 +26,14 @@ search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
-#theme: minimal-mistakes-jekyll
+#remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+##############################
+# Uncomment 'theme' and comment 
+# 'remote_theme' to use local 
+# theme
+##############################
+theme: minimal-mistakes-jekyll
+#
 minimal_mistakes_skin: air # "default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Outputting
