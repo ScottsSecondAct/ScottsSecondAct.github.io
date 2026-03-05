@@ -1,6 +1,6 @@
 ---
 title: About
-permalink: /about/
+permalink: /bio/
 ---
 ![Scott's Image](https://avatars.githubusercontent.com/u/89648717?v=4)
 
