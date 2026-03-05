@@ -23,4 +23,5 @@ jobs:
           bundler-cache: true
 
       - name: Build site
+        working-directory: ${{ github.workspace }}
         run: bundle exec jekyll build
