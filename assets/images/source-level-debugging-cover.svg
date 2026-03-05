@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Source Level Debugging Cover</title>
+  <desc id="desc">A debugger themed image showing breakpoints, registers, and source view.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" rx="20"/>
+
+  <g font-family="'Segoe UI', Arial, sans-serif" fill="#0f172a">
+    <text x="70" y="90" font-size="40" font-weight="700">Source-Level Debugging</text>
+    <text x="70" y="126" font-size="22" fill="#334155">gdb + Visual Studio Code</text>
+  </g>
+
+  <rect x="70" y="165" width="760" height="460" rx="14" fill="#0f2033"/>
+  <rect x="850" y="165" width="280" height="460" rx="14" fill="#102a43"/>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="22">
+    <text x="98" y="220" fill="#93c5fd">1  .intel_syntax noprefix</text>
+    <text x="98" y="255" fill="#cbd5e1">2  _start:</text>
+    <text x="98" y="290" fill="#cbd5e1">3      mov rax, 60</text>
+    <text x="98" y="325" fill="#fca5a5">4  ->  xor rdi, rdi</text>
+    <text x="98" y="360" fill="#cbd5e1">5      syscall</text>
+    <circle cx="84" cy="317" r="8" fill="#ef4444"/>
+    <text x="98" y="430" fill="#86efac">(gdb) break _start</text>
+    <text x="98" y="465" fill="#86efac">(gdb) run</text>
+    <text x="98" y="500" fill="#86efac">(gdb) stepi</text>
+  </g>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="20" fill="#e2e8f0">
+    <text x="875" y="220">Registers</text>
+    <text x="875" y="260">RAX 0x0000003c</text>
+    <text x="875" y="295">RDI 0x00000000</text>
+    <text x="875" y="330">RSP 0x7fffffffe0</text>
+    <text x="875" y="365">RIP 0x40100f</text>
+    <text x="875" y="430" fill="#7dd3fc">Call Stack</text>
+    <text x="875" y="465">_start</text>
+    <text x="875" y="530" fill="#fbbf24">Watch: [rsp]</text>
+    <text x="875" y="565" fill="#34d399">Next: syscall</text>
+  </g>
+</svg>

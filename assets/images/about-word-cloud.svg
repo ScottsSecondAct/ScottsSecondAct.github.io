@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">About Word Cloud</title>
+  <desc id="desc">Word cloud highlighting teaching, engineering, and computational biology topics.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)" rx="24"/>
+
+  <g fill="#10324a" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="600" y="330" font-size="76" font-weight="700">Computer Science</text>
+    <text x="390" y="250" font-size="50" fill="#0f766e">Teaching</text>
+    <text x="850" y="250" font-size="48" fill="#1d4ed8">Engineering</text>
+    <text x="620" y="430" font-size="44" fill="#7c3aed">Computational Biology</text>
+
+    <text x="280" y="360" font-size="34" fill="#334155">Debugging</text>
+    <text x="920" y="360" font-size="34" fill="#334155">Digital Logic</text>
+    <text x="320" y="460" font-size="32" fill="#1f2937">Architecture</text>
+    <text x="920" y="460" font-size="30" fill="#1f2937">Lifelong Learning</text>
+
+    <text x="240" y="180" font-size="28" fill="#475569">Mentorship</text>
+    <text x="960" y="180" font-size="28" fill="#475569">Research</text>
+    <text x="600" y="165" font-size="30" fill="#0f172a">AI</text>
+    <text x="145" y="300" font-size="24" fill="#475569" transform="rotate(-18 145 300)">C++</text>
+    <text x="1060" y="305" font-size="24" fill="#475569" transform="rotate(16 1060 305)">Genomics</text>
+    <text x="155" y="520" font-size="24" fill="#475569" transform="rotate(14 155 520)">Bioinformatics</text>
+    <text x="1035" y="530" font-size="24" fill="#475569" transform="rotate(-14 1035 530)">Systems Thinking</text>
+
+    <text x="600" y="520" font-size="28" fill="#0f766e">Problem Solving</text>
+    <text x="445" y="150" font-size="22" fill="#1d4ed8">Algorithms</text>
+    <text x="760" y="150" font-size="22" fill="#1d4ed8">Data Structures</text>
+    <text x="190" y="250" font-size="21" fill="#475569" transform="rotate(-8 190 250)">LLVM</text>
+    <text x="1010" y="245" font-size="21" fill="#475569" transform="rotate(8 1010 245)">Compilers</text>
+    <text x="220" y="405" font-size="22" fill="#334155">Assembly</text>
+    <text x="980" y="405" font-size="22" fill="#334155">Formal Methods</text>
+    <text x="445" y="560" font-size="22" fill="#475569">Simulation</text>
+    <text x="760" y="560" font-size="22" fill="#475569">Verification</text>
+    <text x="320" y="605" font-size="20" fill="#64748b">Python</text>
+    <text x="455" y="610" font-size="20" fill="#64748b">Rust</text>
+    <text x="585" y="610" font-size="20" fill="#64748b">CUDA</text>
+    <text x="715" y="610" font-size="20" fill="#64748b">AI Agents</text>
+    <text x="855" y="605" font-size="20" fill="#64748b">Health Tech</text>
+    <text x="600" y="95" font-size="22" fill="#334155">Symbolic AI</text>
+    <text x="120" y="430" font-size="19" fill="#64748b" transform="rotate(-12 120 430)">Mentor</text>
+    <text x="1080" y="430" font-size="19" fill="#64748b" transform="rotate(12 1080 430)">Teacher</text>
+    <text x="95" y="585" font-size="18" fill="#64748b" transform="rotate(12 95 585)">Curiosity</text>
+    <text x="1100" y="585" font-size="18" fill="#64748b" transform="rotate(-12 1100 585)">Impact</text>
+  </g>
+</svg>

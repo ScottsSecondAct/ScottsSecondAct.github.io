@@ -1,5 +1,7 @@
 ---
 title: Compile-Time Dimensional Analysis in Modern C++
+header:
+  teaser: /assets/images/dimensional-analysis-cover.svg
 categories:
   - Blog
 tags:

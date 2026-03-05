@@ -7,6 +7,24 @@
 <div class="feature__wrapper">
 
   {% for f in feature_row %}
+    {% assign latest_post = nil %}
+    {% assign card_title = f.title %}
+    {% assign card_excerpt = f.excerpt %}
+    {% assign card_url = f.url %}
+
+    {% if f.latest_post %}
+      {% assign latest_post = site.posts.first %}
+      {% if latest_post %}
+        {% assign card_title = f.title | default: latest_post.title %}
+        {% if f.excerpt %}
+          {% assign card_excerpt = f.excerpt %}
+        {% else %}
+          {% assign card_excerpt = latest_post.excerpt | strip_html | strip_newlines | truncate: 170 %}
+        {% endif %}
+        {% assign card_url = latest_post.url %}
+      {% endif %}
+    {% endif %}
+
     <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
       <div class="archive__item">
         {% if f.image_path %}
@@ -20,18 +38,18 @@
         {% endif %}
 
         <div class="archive__item-body">
-          {% if f.title %}
-            <h2 class="archive__item-title">{{ f.title }}</h2>
+          {% if card_title %}
+            <h2 class="archive__item-title">{{ card_title }}</h2>
           {% endif %}
 
-          {% if f.excerpt %}
+          {% if card_excerpt %}
             <div class="archive__item-excerpt">
-              {{ f.excerpt | markdownify }}
+              {{ card_excerpt | markdownify }}
             </div>
           {% endif %}
 
-          {% if f.url %}
-            <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
+          {% if card_url %}
+            <p><a href="{{ card_url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
           {% endif %}
         </div>
       </div>

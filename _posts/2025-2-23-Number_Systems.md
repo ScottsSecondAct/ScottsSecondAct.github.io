@@ -1,5 +1,7 @@
 ---
 title: Number Systems
+header:
+  teaser: /assets/images/number-systems-cover.svg
 categories:
   - Blog
 tags:

@@ -1,5 +1,7 @@
 ---
 title: A Guide to Moore and Mealy Machines
+header:
+  teaser: /assets/images/moore-machine.png
 categories:
   - Blog
 tags:

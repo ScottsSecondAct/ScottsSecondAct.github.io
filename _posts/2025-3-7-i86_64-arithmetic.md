@@ -1,5 +1,7 @@
 ---
 title: A Guide to x64 Arithmetic Instructions
+header:
+  teaser: /assets/images/x64-arithmetic-cover.svg
 categories:
   - Blog
 tags:

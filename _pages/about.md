@@ -47,4 +47,5 @@ When I'm not coding or studying biology, you'll find me in the pool, sailing, bu
 ## Connect
 
 - **Email:** [scott@ScottsSecondAct.com](mailto:scott@ScottsSecondAct.com)
+- **CV / Resume:** [/cv/](/cv/)
 - **GitHub:** [github.com/ScottsSecondAct](https://github.com/ScottsSecondAct)

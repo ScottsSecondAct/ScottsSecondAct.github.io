@@ -1,5 +1,7 @@
 ---
 title: Source Level Debugging Using gdb and Visual Studio Code
+header:
+  teaser: /assets/images/source-level-debugging-cover.svg
 categories:
   - Blog
 tags:
