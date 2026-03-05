@@ -1,0 +1,389 @@
+// =============================================================================
+// Obsidian-inspired note theme
+// Scoped entirely to .obsidian-note — no other pages are affected.
+//
+// Color strategy: defaults follow the active MM skin (light).
+// Dark values kick in automatically via prefers-color-scheme: dark.
+// Front-matter overrides: obsidian_light: true  →  force light
+//                         obsidian_dark: true   →  force dark
+// =============================================================================
+
+// Reusable dark-token map (used both in the media query and .obsidian-dark)
+@mixin ob-dark-tokens {
+  --ob-bg-primary:   #1e1e1e;
+  --ob-bg-secondary: #262626;
+  --ob-bg-tertiary:  #2d2d2d;
+  --ob-text-normal:  #dcddde;
+  --ob-text-muted:   #888888;
+  --ob-text-faint:   #555555;
+  --ob-accent:       #7f6df2;
+  --ob-accent-hover: #a696f5;
+  --ob-border:       #333333;
+  --ob-code-bg:      #2d2d2d;
+  --ob-code-text:    #f8f8f2;
+  --ob-tag-bg:       rgba(127, 109, 242, 0.15);
+  --ob-tag-color:    #a696f5;
+  --ob-graph-node:   #555555;
+  --ob-graph-text:   #cccccc;
+  --ob-graph-link:   #444444;
+}
+
+@mixin ob-light-tokens {
+  --ob-bg-primary:   #{$background-color};
+  --ob-bg-secondary: #{mix(#000, $background-color, 4%)};
+  --ob-bg-tertiary:  #{$code-background-color};
+  --ob-text-normal:  #{$text-color};
+  --ob-text-muted:   #{$muted-text-color};
+  --ob-text-faint:   #{mix(#fff, $text-color, 40%)};
+  --ob-accent:       #7f6df2;
+  --ob-accent-hover: #6355c7;
+  --ob-border:       #{$border-color};
+  --ob-code-bg:      #{$code-background-color};
+  --ob-code-text:    #{$text-color};
+  --ob-tag-bg:       rgba(127, 109, 242, 0.12);
+  --ob-tag-color:    #6355c7;
+  --ob-graph-node:   #{$muted-text-color};
+  --ob-graph-text:   #{$text-color};
+  --ob-graph-link:   #{$border-color};
+}
+
+.obsidian-note {
+  // Default: match the active MM skin (light)
+  @include ob-light-tokens;
+
+  // Automatically switch to dark when the OS prefers it
+  @media (prefers-color-scheme: dark) {
+    @include ob-dark-tokens;
+  }
+
+  // Force light regardless of OS preference (front matter: obsidian_light: true)
+  &.obsidian-light {
+    @include ob-light-tokens;
+  }
+
+  // Force dark regardless of OS preference (front matter: obsidian_dark: true)
+  &.obsidian-dark {
+    @include ob-dark-tokens;
+  }
+
+  // -------------------------------------------------------------------------
+  // Base
+  // -------------------------------------------------------------------------
+  background: var(--ob-bg-primary);
+  color: var(--ob-text-normal);
+  line-height: 1.65;
+  border-radius: 6px;
+  padding: 1.5rem 2rem 2rem;
+
+  // -------------------------------------------------------------------------
+  // Note title & meta (rendered by obsidian-note layout)
+  // -------------------------------------------------------------------------
+  .ob-title {
+    color: var(--ob-text-normal);
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 0 0.15em;
+    border-bottom: none;
+    line-height: 1.2;
+  }
+
+  .ob-meta {
+    color: var(--ob-text-muted);
+    font-size: 0.82em;
+    margin: 0 0 0.5em;
+  }
+
+  .ob-meta-tags {
+    margin: 0 0 1.25em;
+  }
+
+  // -------------------------------------------------------------------------
+  // Typography
+  // -------------------------------------------------------------------------
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--ob-text-normal);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+  }
+
+  h1 { font-size: 1.85em; border-bottom: 1px solid var(--ob-border); padding-bottom: 0.25em; }
+  h2 { font-size: 1.45em; border-bottom: 1px solid var(--ob-border); padding-bottom: 0.2em; }
+  h3 { font-size: 1.2em; }
+  h4 { font-size: 1.05em; }
+
+  p {
+    color: var(--ob-text-normal);
+    margin: 0.65em 0;
+  }
+
+  strong { color: var(--ob-text-normal); font-weight: 700; }
+  em     { color: var(--ob-text-normal); }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--ob-border);
+    margin: 2em 0;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  // -------------------------------------------------------------------------
+  // Links
+  // -------------------------------------------------------------------------
+  a {
+    color: var(--ob-accent);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--ob-accent-hover);
+      text-decoration: underline;
+    }
+  }
+
+  a.internal-link {
+    color: var(--ob-accent);
+    background: rgba(127, 109, 242, 0.1);
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(127, 109, 242, 0.22);
+      text-decoration: none;
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // Tags
+  // -------------------------------------------------------------------------
+  a.ob-tag {
+    display: inline-block;
+    background: var(--ob-tag-bg);
+    color: var(--ob-tag-color);
+    padding: 0.08em 0.55em;
+    border-radius: 1em;
+    font-size: 0.82em;
+    text-decoration: none;
+    margin: 0 0.1em;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: rgba(127, 109, 242, 0.28);
+      text-decoration: none;
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // Code
+  // -------------------------------------------------------------------------
+  code {
+    background: var(--ob-code-bg);
+    color: var(--ob-code-text);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    font-family: "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
+    font-size: 0.88em;
+  }
+
+  pre {
+    background: var(--ob-bg-tertiary);
+    border: 1px solid var(--ob-border);
+    border-radius: 6px;
+    padding: 1em 1.1em;
+    overflow-x: auto;
+    margin: 1em 0;
+
+    code {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      font-size: 0.9em;
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // Blockquotes
+  // -------------------------------------------------------------------------
+  blockquote {
+    border-left: 3px solid var(--ob-accent);
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    color: var(--ob-text-muted);
+    background: var(--ob-bg-secondary);
+    border-radius: 0 6px 6px 0;
+  }
+
+  // -------------------------------------------------------------------------
+  // Lists
+  // -------------------------------------------------------------------------
+  ul, ol {
+    padding-left: 1.6em;
+    margin: 0.5em 0 0.75em;
+  }
+
+  ul       { list-style-type: disc; }
+  ul ul    { list-style-type: circle; }
+  ul ul ul { list-style-type: square; }
+
+  ol       { list-style-type: decimal; }
+  ol ol    { list-style-type: lower-alpha; }
+  ol ol ol { list-style-type: lower-roman; }
+
+  li { margin: 0.25em 0; }
+
+  // -------------------------------------------------------------------------
+  // Tables
+  // -------------------------------------------------------------------------
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 0.93em;
+  }
+
+  th {
+    background: var(--ob-bg-secondary);
+    color: var(--ob-text-normal);
+    padding: 0.5em 0.75em;
+    text-align: left;
+    border: 1px solid var(--ob-border);
+    font-weight: 600;
+  }
+
+  td {
+    padding: 0.45em 0.75em;
+    border: 1px solid var(--ob-border);
+    color: var(--ob-text-normal);
+  }
+
+  tr:nth-child(even) td {
+    background: var(--ob-bg-secondary);
+  }
+
+  // -------------------------------------------------------------------------
+  // Callouts  (produced by obsidian_compat.rb converter)
+  // -------------------------------------------------------------------------
+  .obs-callout {
+    --obs-callout-rgb: 127, 109, 242;
+
+    border-left: 4px solid rgb(var(--obs-callout-rgb));
+    background: rgba(var(--obs-callout-rgb), 0.08);
+    border-radius: 0 6px 6px 0;
+    padding: 0.7em 1em;
+    margin: 1em 0;
+
+    &__title {
+      font-weight: 700;
+      color: rgb(var(--obs-callout-rgb));
+      margin: 0 0 0.4em;
+    }
+
+    // Display math inside callouts: smaller font, scroll on overflow
+    mjx-container[display="true"],
+    .MathJax[display="true"],
+    .MathJax_Display {
+      font-size: 0.78em !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      max-width: 100%;
+      margin: 0.4em 0 !important;
+    }
+
+    // Inline math: slightly smaller too
+    mjx-container:not([display="true"]),
+    .MathJax:not([display="true"]) {
+      font-size: 0.88em !important;
+    }
+
+    // Type palette — matches Obsidian defaults
+    &--note, &--info, &--todo                              { --obs-callout-rgb: 8,   109, 221; }
+    &--abstract, &--summary, &--tldr,
+    &--tip, &--hint, &--important                          { --obs-callout-rgb: 0,   191, 188; }
+    &--success, &--check, &--done                          { --obs-callout-rgb: 8,   185,  78; }
+    &--question, &--help, &--faq,
+    &--warning, &--caution, &--attention                   { --obs-callout-rgb: 236, 117,   0; }
+    &--failure, &--fail, &--missing,
+    &--danger, &--error, &--bug                            { --obs-callout-rgb: 233,  49,  71; }
+    &--example                                             { --obs-callout-rgb: 120,  82, 238; }
+    &--quote, &--cite                                      { --obs-callout-rgb: 158, 158, 158; }
+  }
+
+  // -------------------------------------------------------------------------
+  // Backlinks panel
+  // -------------------------------------------------------------------------
+  .ob-backlinks {
+    margin-top: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--ob-border);
+
+    &__title {
+      color: var(--ob-text-muted);
+      font-size: 0.78em;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 600;
+      margin-bottom: 0.6em;
+      border-bottom: none;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li { margin: 0.35em 0; }
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // Graph view
+  // -------------------------------------------------------------------------
+  .ob-graph-container {
+    margin-top: 2.5em;
+    background: var(--ob-bg-secondary);
+    border: 1px solid var(--ob-border);
+    border-radius: 6px;
+    overflow: hidden;
+
+    summary.ob-graph-toggle {
+      cursor: pointer;
+      padding: 0.5em 0.9em;
+      font-size: 0.8em;
+      color: var(--ob-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      user-select: none;
+      list-style: none;
+
+      &::-webkit-details-marker { display: none; }
+
+      &::before {
+        content: "▶ ";
+        font-size: 0.75em;
+      }
+    }
+
+    &[open] summary.ob-graph-toggle::before {
+      content: "▼ ";
+    }
+
+    #ob-graph-svg {
+      display: block;
+      background: var(--ob-bg-primary);
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // KaTeX math (loaded via scripts.html)
+  // -------------------------------------------------------------------------
+  .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5em 0;
+  }
+}

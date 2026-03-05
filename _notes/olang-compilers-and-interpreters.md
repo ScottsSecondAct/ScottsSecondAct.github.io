@@ -1,14 +1,17 @@
 ---
-title: Compilers and Interpreters
-layout: single
+title: "Compilers and Interpreters"
+tags:
+  - olang
+  - compilers
+  - programming-languages
 ---
-Below is an overview of the traditional components in both compilers and interpreters, along with how they generally work. Although many modern language implementations use hybrid or more sophisticated approaches, the following outlines the classic structures you’ll find in most texts on compilers and interpreters.
+Below is an overview of the traditional components in both compilers and interpreters, along with how they generally work. Although many modern language implementations use hybrid or more sophisticated approaches, the following outlines the classic structures you'll find in most texts on compilers and interpreters.
 
 ---
 
 ## Compiler Components
 
-A **compiler** translates code from one language (often called the “source language”) into another form (often machine code or bytecode) before execution. The fundamental stages include:
+A **compiler** translates code from one language (often called the "source language") into another form (often machine code or bytecode) before execution. The fundamental stages include:
 
 1. **Lexical Analysis (Scanning)**
    - **Task**: Transforms the raw source code text into a sequence of **tokens** (e.g., identifiers, keywords, operators).
@@ -44,26 +47,26 @@ An **interpreter** executes the source code (or an internal representation of it
 
 3. **Evaluation / Execution**
    - Instead of generating final machine code, the interpreter **walks** the AST (or its internal representation) and **executes** instructions in real time.
-   - When a language is purely interpreted, each construct (e.g., an `if` statement, a function call) is processed on the fly according to the interpreter’s runtime environment.
+   - When a language is purely interpreted, each construct (e.g., an `if` statement, a function call) is processed on the fly according to the interpreter's runtime environment.
 
 4. **(Optional) Intermediate Bytecode Generation**
-   - Many modern “interpreted” languages (e.g., Python, JavaScript) actually do generate some form of internal bytecode. The interpreter then executes that bytecode via a virtual machine.
+   - Many modern "interpreted" languages (e.g., Python, JavaScript) actually do generate some form of internal bytecode. The interpreter then executes that bytecode via a virtual machine.
    - This is a hybrid approach—sources are *compiled* to bytecode and then *interpreted*.
 
 ---
 
 ## Summary of Key Differences
 
-- **Translation vs. Direct Execution**:  
+- **Translation vs. Direct Execution**:
   A compiler produces an output program (machine code or bytecode) that you run separately. An interpreter executes the code directly (or via an intermediate bytecode), so there is typically no separate, user-facing binary produced.
 
-- **Speed**:  
+- **Speed**:
   Compiled executables often run faster once built, because they translate directly to machine instructions. Purely interpreted languages can be slower, as they parse and execute code on the fly. Modern JIT (Just-In-Time) compilers and other hybrid solutions blur these lines significantly.
 
-- **Error Handling**:  
+- **Error Handling**:
   A compiler performs extensive checks before the program runs, capturing many errors early. An interpreter might catch issues only when it encounters them during execution.
 
-- **Development Cycle**:  
-  Interpreted languages can be quicker to test and debug in small increments because you typically don’t need to recompile. Compiled languages often require a separate build step but may give more robust static checks and higher runtime performance.
+- **Development Cycle**:
+  Interpreted languages can be quicker to test and debug in small increments because you typically don't need to recompile. Compiled languages often require a separate build step but may give more robust static checks and higher runtime performance.
 
 These general principles underlie the design of many language implementations (including hybrid ones that have elements of both compilation and interpretation).

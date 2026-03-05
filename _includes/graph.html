@@ -1,0 +1,132 @@
+{% comment %}
+  D3.js force-directed graph view for the current note.
+  Shows the current note and its linked/linking notes.
+  Only renders on pages in the notes collection.
+{% endcomment %}
+{% if page.collection == "notes" %}
+<details class="ob-graph-container" id="ob-graph-container">
+  <summary class="ob-graph-toggle">Graph View</summary>
+  <svg id="ob-graph-svg" width="100%" height="300" aria-label="Note connection graph"></svg>
+</details>
+
+<script>
+(function () {
+  var currentUrl = {{ page.url | jsonify }};
+
+  var nodes = [
+    {% for note in site.notes %}
+    {
+      id: {{ note.url | jsonify }},
+      title: {{ note.title | default: note.basename_without_ext | jsonify }},
+      url: {{ note.url | absolute_url | jsonify }},
+      current: {{ note.url == page.url }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  var links = [];
+  {% for note in site.notes %}
+    {% if note.backlinks and note.backlinks.size > 0 %}
+      {% for backlink in note.backlinks %}
+        links.push({ source: {{ backlink.url | jsonify }}, target: {{ note.url | jsonify }} });
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  // Only keep nodes connected to the current note (1 hop)
+  var connectedIds = new Set([currentUrl]);
+  links.forEach(function (l) {
+    if (l.source === currentUrl) connectedIds.add(l.target);
+    if (l.target === currentUrl) connectedIds.add(l.source);
+  });
+  var visibleNodes = nodes.filter(function (n) { return connectedIds.has(n.id); });
+  var visibleLinks = links.filter(function (l) {
+    return connectedIds.has(l.source) && connectedIds.has(l.target);
+  });
+
+  if (visibleNodes.length === 0) return;
+
+  var svgEl = document.getElementById("ob-graph-svg");
+
+  function renderGraph() {
+    var width = svgEl.parentElement.clientWidth || 600;
+    var height = 300;
+
+    // Read theme tokens from CSS custom properties
+    var noteEl = svgEl.closest(".obsidian-note") || document.body;
+    var cs = getComputedStyle(noteEl);
+    var accent     = cs.getPropertyValue("--ob-accent").trim()      || "#7f6df2";
+    var accentHov  = cs.getPropertyValue("--ob-accent-hover").trim()|| "#a696f5";
+    var nodeColor  = cs.getPropertyValue("--ob-graph-node").trim()  || "#555";
+    var textColor  = cs.getPropertyValue("--ob-graph-text").trim()  || "#333";
+    var linkColor  = cs.getPropertyValue("--ob-graph-link").trim()  || "#aaa";
+
+    var svg = d3.select(svgEl).attr("viewBox", [0, 0, width, height]);
+
+    svg.append("defs").append("marker")
+      .attr("id", "ob-arrow")
+      .attr("viewBox", "0 -5 10 10")
+      .attr("refX", 18).attr("refY", 0)
+      .attr("markerWidth", 6).attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path").attr("d", "M0,-5L10,0L0,5").attr("fill", accent);
+
+    var simulation = d3.forceSimulation(visibleNodes)
+      .force("link", d3.forceLink(visibleLinks).id(function (d) { return d.id; }).distance(80))
+      .force("charge", d3.forceManyBody().strength(-200))
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("collision", d3.forceCollide(24));
+
+    var link = svg.append("g")
+      .selectAll("line").data(visibleLinks).join("line")
+      .attr("stroke", linkColor).attr("stroke-opacity", 0.7).attr("stroke-width", 1.5)
+      .attr("marker-end", "url(#ob-arrow)");
+
+    var nodeG = svg.append("g")
+      .selectAll("g").data(visibleNodes).join("g")
+      .call(d3.drag()
+        .on("start", function (ev, d) { if (!ev.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+        .on("drag",  function (ev, d) { d.fx = ev.x; d.fy = ev.y; })
+        .on("end",   function (ev, d) { if (!ev.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+    nodeG.append("circle")
+      .attr("r", function (d) { return d.current ? 10 : 7; })
+      .attr("fill", function (d) { return d.current ? accent : nodeColor; })
+      .attr("stroke", function (d) { return d.current ? accentHov : linkColor; })
+      .attr("stroke-width", 1.5);
+
+    nodeG.append("a").attr("href", function (d) { return d.url; })
+      .append("text")
+      .attr("dy", "0.32em")
+      .attr("x", function (d) { return d.current ? 14 : 11; })
+      .attr("font-size", "11px").attr("fill", textColor)
+      .text(function (d) {
+        var t = d.title || d.id;
+        return t.length > 22 ? t.substring(0, 20) + "\u2026" : t;
+      });
+
+    nodeG.append("title").text(function (d) { return d.title; });
+
+    simulation.on("tick", function () {
+      link
+        .attr("x1", function (d) { return d.source.x; })
+        .attr("y1", function (d) { return d.source.y; })
+        .attr("x2", function (d) { return d.target.x; })
+        .attr("y2", function (d) { return d.target.y; });
+      nodeG.attr("transform", function (d) {
+        return "translate(" + Math.max(15, Math.min(width - 15, d.x)) + "," + Math.max(15, Math.min(height - 15, d.y)) + ")";
+      });
+    });
+  }
+
+  if (typeof d3 !== "undefined") {
+    renderGraph();
+  } else {
+    var s = document.createElement("script");
+    s.src = "https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js";
+    s.onload = renderGraph;
+    document.head.appendChild(s);
+  }
+})();
+</script>
+{% endif %}

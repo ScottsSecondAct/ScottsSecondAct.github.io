@@ -1,0 +1,10 @@
+{% if page.backlinks and page.backlinks.size > 0 %}
+<div class="ob-backlinks">
+  <h3 class="ob-backlinks__title">Linked Mentions</h3>
+  <ul class="ob-backlinks__list">
+    {% for backlink in page.backlinks %}
+      <li><a href="{{ backlink.url | absolute_url }}" class="internal-link">{{ backlink.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

@@ -1,13 +1,12 @@
 ---
-title: Syntax Example 2
-layout: single
+title: "olang Syntax: Mutate, Transcribe, and Translate"
+tags:
+  - olang
+  - bioinformatics
+  - programming-languages
 ---
 
-Here’s the **Markdown-formatted explanation** of what happens when you **mutate**, **transcribe**, and **translate** a gene in **olang**:
-
----
-
-## 🧬 What Happens When You `mutate`, `transcribe`, and `translate` a Gene in **olang**
+## What Happens When You `mutate`, `transcribe`, and `translate` a Gene in olang
 
 In **olang**, symbolic biological operations follow the same conceptual flow as molecular biology. When you apply the sequence:
 
@@ -19,9 +18,9 @@ you are symbolically simulating a **point mutation**, followed by **gene express
 
 ---
 
-### 🔁 Step-by-Step Breakdown
+### Step-by-Step Breakdown
 
-#### 1. **Mutation**
+#### 1. Mutation
 - The `⇝ mutate at 5 with "C→T"` operation symbolically modifies the gene's DNA.
 - This is a **point mutation**, substituting the nucleotide **C** at position 5 with **T**.
 - The result is a **new `Gene` object**, preserving symbolic traceability back to the original gene.
@@ -33,7 +32,7 @@ Original DNA: ATGCGTACCTGA
 Mutated DNA:  ATGCGTATCTGA
 ```
 
-#### 2. **Transcription**
+#### 2. Transcription
 - The mutated DNA is transcribed into an mRNA `Transcript`.
 - DNA → RNA: All **T** nucleotides become **U** in the transcript.
 
@@ -42,7 +41,7 @@ Mutated DNA: ATG CGT ATC TGA
 mRNA:        AUG CGU AUC UGA
 ```
 
-#### 3. **Translation**
+#### 3. Translation
 - The transcript is translated into a `Protein` by reading RNA codons (triplets) and converting them into amino acids.
 
 ```text
@@ -54,7 +53,7 @@ Amino Acids:  Met | Arg | Ile | Stop
 
 ---
 
-### 🧠 In olang Terms
+### In olang Terms
 
 ```olang
 define gene TP53 {
@@ -65,12 +64,12 @@ TP53 ⇝ mutate at 5 with "C→T" ⇒ transcribe ⇒ translate;
 ```
 
 - Returns a `Protein` object derived from the **mutated gene**.
-- Symbolically maintains a traceable path:  
+- Symbolically maintains a traceable path:
   `Gene → Transcript → Protein`, with mutation metadata.
 
 ---
 
-### ✅ Final Result: `Protein` Object with Mutation Context
+### Final Result: `Protein` Object with Mutation Context
 
 ```json
 {
@@ -86,13 +85,9 @@ TP53 ⇝ mutate at 5 with "C→T" ⇒ transcribe ⇒ translate;
 
 ---
 
-### 🔍 Use Case in Analysis
+### Use Case in Analysis
 
 This symbolic mutation flow can be used to:
 - Simulate **SNP effects** on protein structure
 - Model **loss-of-function** or **gain-of-function** variants
 - Integrate with AI to predict downstream **phenotypic impact**
-
----
-
-Let me know if you’d like to simulate other mutation types (insertion, deletion, frameshift) in olang!
