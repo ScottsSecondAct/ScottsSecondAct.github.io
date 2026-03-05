@@ -1,7 +1,30 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
-author_profile: true
+layout: splash
+header:
+  overlay_color: "#1a237e"
+  overlay_filter: 0.6
+  actions:
+    - label: "Explore Blog"
+      url: /blog/
+    - label: "View CV"
+      url: /cv/
+title: "Scott Davis"
+excerpt: "Educator, Computer Engineer and Scientist, and Computational Biologist"
+feature_row:
+  - title: "Blog"
+    excerpt: "Computer science, assembly, digital logic, and more."
+    url: /blog/
+    btn_label: "Read Posts"
+    btn_class: "btn--primary"
+  - title: "About"
+    excerpt: "Teaching, research interests, and contact."
+    url: /about/
+    btn_label: "Learn More"
+    btn_class: "btn--primary"
+  - title: "CV / Résumé"
+    excerpt: "Skills, experience, education, and publications."
+    url: /cv/
+    btn_label: "View CV"
+    btn_class: "btn--primary"
 ---
+{% include feature_row %}
