@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020917"/>
+      <stop offset="60%" stop-color="#081028"/>
+      <stop offset="100%" stop-color="#0c0824"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="400" fill="url(#bg)"/>
+
+  <!-- Background sequence text -->
+  <text font-family="'Courier New',monospace" font-size="13" fill="#0d3a6e" opacity="0.5" letter-spacing="1">
+    <tspan x="10" y="28">ATGCGATCGATCGAATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG</tspan>
+    <tspan x="10" y="380">TACGCTAGCTAGCTTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC</tspan>
+  </text>
+  <text font-family="'Courier New',monospace" font-size="11" fill="#0a2a50" opacity="0.3">
+    <tspan x="10" y="48">GCATCGTAGCTAGCGCATCGTAGCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG</tspan>
+    <tspan x="900" y="48">ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG</tspan>
+    <tspan x="10" y="360">CGTATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG</tspan>
+    <tspan x="900" y="360">GCTAGCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG</tspan>
+  </text>
+
+  <!-- Background particles -->
+  <g fill="#4fc3f7" opacity="0.45">
+    <circle cx="30" cy="90" r="1.8"/>
+    <circle cx="130" cy="62" r="1.2"/>
+    <circle cx="240" cy="88" r="2.2"/>
+    <circle cx="410" cy="72" r="1.5"/>
+    <circle cx="530" cy="95" r="1.8"/>
+    <circle cx="710" cy="66" r="2"/>
+    <circle cx="880" cy="82" r="1.5"/>
+    <circle cx="1030" cy="74" r="2.2"/>
+    <circle cx="1190" cy="90" r="1.8"/>
+    <circle cx="1390" cy="78" r="1.5"/>
+    <circle cx="1530" cy="94" r="2"/>
+    <circle cx="70" cy="318" r="1.8"/>
+    <circle cx="210" cy="338" r="1.5"/>
+    <circle cx="390" cy="326" r="2.2"/>
+    <circle cx="590" cy="334" r="1.8"/>
+    <circle cx="790" cy="322" r="1.5"/>
+    <circle cx="990" cy="316" r="2"/>
+    <circle cx="1110" cy="342" r="1.5"/>
+    <circle cx="1310" cy="330" r="2.2"/>
+    <circle cx="1490" cy="338" r="1.8"/>
+  </g>
+
+  <!-- Strand 2 (teal/cyan, back strand) -->
+  <path d="M 0,200 C 36,125 64,125 100,200 C 136,275 164,275 200,200
+           C 236,125 264,125 300,200 C 336,275 364,275 400,200
+           C 436,125 464,125 500,200 C 536,275 564,275 600,200
+           C 636,125 664,125 700,200 C 736,275 764,275 800,200
+           C 836,125 864,125 900,200 C 936,275 964,275 1000,200
+           C 1036,125 1064,125 1100,200 C 1136,275 1164,275 1200,200
+           C 1236,125 1264,125 1300,200 C 1336,275 1364,275 1400,200
+           C 1436,125 1464,125 1500,200 C 1536,275 1564,275 1600,200"
+        stroke="#00e5ff" stroke-width="5" fill="none" stroke-linecap="round"
+        filter="url(#glow)" opacity="0.85"/>
+
+  <!-- Base pair rungs -->
+  <g stroke-width="3" stroke-linecap="round" opacity="0.82">
+    <line x1="50"   y1="125" x2="50"   y2="275" stroke="#ff6b9d"/>
+    <line x1="150"  y1="125" x2="150"  y2="275" stroke="#c8f560"/>
+    <line x1="250"  y1="125" x2="250"  y2="275" stroke="#60d5f5"/>
+    <line x1="350"  y1="125" x2="350"  y2="275" stroke="#ffd60a"/>
+    <line x1="450"  y1="125" x2="450"  y2="275" stroke="#ff6b9d"/>
+    <line x1="550"  y1="125" x2="550"  y2="275" stroke="#c8f560"/>
+    <line x1="650"  y1="125" x2="650"  y2="275" stroke="#60d5f5"/>
+    <line x1="750"  y1="125" x2="750"  y2="275" stroke="#ffd60a"/>
+    <line x1="850"  y1="125" x2="850"  y2="275" stroke="#ff6b9d"/>
+    <line x1="950"  y1="125" x2="950"  y2="275" stroke="#c8f560"/>
+    <line x1="1050" y1="125" x2="1050" y2="275" stroke="#60d5f5"/>
+    <line x1="1150" y1="125" x2="1150" y2="275" stroke="#ffd60a"/>
+    <line x1="1250" y1="125" x2="1250" y2="275" stroke="#ff6b9d"/>
+    <line x1="1350" y1="125" x2="1350" y2="275" stroke="#c8f560"/>
+    <line x1="1450" y1="125" x2="1450" y2="275" stroke="#60d5f5"/>
+    <line x1="1550" y1="125" x2="1550" y2="275" stroke="#ffd60a"/>
+  </g>
+
+  <!-- Nucleotide nodes on strand 2 (cyan) — alternating y=125 / y=275 -->
+  <g fill="#00e5ff" opacity="0.9" filter="url(#glow)">
+    <circle cx="50"   cy="125" r="7"/><circle cx="150"  cy="275" r="7"/>
+    <circle cx="250"  cy="125" r="7"/><circle cx="350"  cy="275" r="7"/>
+    <circle cx="450"  cy="125" r="7"/><circle cx="550"  cy="275" r="7"/>
+    <circle cx="650"  cy="125" r="7"/><circle cx="750"  cy="275" r="7"/>
+    <circle cx="850"  cy="125" r="7"/><circle cx="950"  cy="275" r="7"/>
+    <circle cx="1050" cy="125" r="7"/><circle cx="1150" cy="275" r="7"/>
+    <circle cx="1250" cy="125" r="7"/><circle cx="1350" cy="275" r="7"/>
+    <circle cx="1450" cy="125" r="7"/><circle cx="1550" cy="275" r="7"/>
+  </g>
+
+  <!-- Nucleotide nodes on strand 1 (magenta) — opposite y -->
+  <g fill="#ff2d87" opacity="0.9" filter="url(#glow)">
+    <circle cx="50"   cy="275" r="7"/><circle cx="150"  cy="125" r="7"/>
+    <circle cx="250"  cy="275" r="7"/><circle cx="350"  cy="125" r="7"/>
+    <circle cx="450"  cy="275" r="7"/><circle cx="550"  cy="125" r="7"/>
+    <circle cx="650"  cy="275" r="7"/><circle cx="750"  cy="125" r="7"/>
+    <circle cx="850"  cy="275" r="7"/><circle cx="950"  cy="125" r="7"/>
+    <circle cx="1050" cy="275" r="7"/><circle cx="1150" cy="125" r="7"/>
+    <circle cx="1250" cy="275" r="7"/><circle cx="1350" cy="125" r="7"/>
+    <circle cx="1450" cy="275" r="7"/><circle cx="1550" cy="125" r="7"/>
+  </g>
+
+  <!-- Strand 1 (magenta/pink, front strand — drawn last) -->
+  <path d="M 0,200 C 36,275 64,275 100,200 C 136,125 164,125 200,200
+           C 236,275 264,275 300,200 C 336,125 364,125 400,200
+           C 436,275 464,275 500,200 C 536,125 564,125 600,200
+           C 636,275 664,275 700,200 C 736,125 764,125 800,200
+           C 836,275 864,275 900,200 C 936,125 964,125 1000,200
+           C 1036,275 1064,275 1100,200 C 1136,125 1164,125 1200,200
+           C 1236,275 1264,275 1300,200 C 1336,125 1364,125 1400,200
+           C 1436,275 1464,275 1500,200 C 1536,125 1564,125 1600,200"
+        stroke="#ff2d87" stroke-width="5" fill="none" stroke-linecap="round"
+        filter="url(#glow)" opacity="0.85"/>
+
+  <!-- Subtle title watermark -->
+  <text x="800" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="30"
+        font-weight="bold" fill="#ffffff" opacity="0.08" letter-spacing="10">DNA DOUBLE HELIX</text>
+
+  <!-- Nucleotide labels at a few base pairs -->
+  <g font-family="Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="middle">
+    <text x="50"  y="108" fill="#ff6b9d" opacity="0.7">A</text><text x="50"  y="292" fill="#ff6b9d" opacity="0.7">T</text>
+    <text x="250" y="108" fill="#60d5f5" opacity="0.7">C</text><text x="250" y="292" fill="#60d5f5" opacity="0.7">G</text>
+    <text x="450" y="108" fill="#ff6b9d" opacity="0.7">A</text><text x="450" y="292" fill="#ff6b9d" opacity="0.7">T</text>
+    <text x="850" y="108" fill="#ff6b9d" opacity="0.7">T</text><text x="850" y="292" fill="#ff6b9d" opacity="0.7">A</text>
+    <text x="1050" y="108" fill="#60d5f5" opacity="0.7">G</text><text x="1050" y="292" fill="#60d5f5" opacity="0.7">C</text>
+    <text x="1250" y="108" fill="#ff6b9d" opacity="0.7">A</text><text x="1250" y="292" fill="#ff6b9d" opacity="0.7">T</text>
+  </g>
+</svg>

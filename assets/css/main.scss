@@ -7,9 +7,39 @@ search: false
 @import "minimal-mistakes"; // main partials
 @import "minimal-mistakes/obsidian-theme"; // Obsidian note styles
 
+/* Hero carousel */
+.hero-carousel {
+  position: relative !important;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-carousel__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+
+  .page__title {
+    opacity: 0.55;
+  }
+}
+
 /* Homepage visual polish */
 .page__hero--overlay {
-  min-height: 60vh;
+  min-height: 35vh;
 }
 
 .page__hero--overlay .page__title,

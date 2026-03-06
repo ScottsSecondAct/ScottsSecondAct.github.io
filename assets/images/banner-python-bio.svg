@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e2030"/>
+      <stop offset="100%" stop-color="#1a1b2e"/>
+    </linearGradient>
+    <linearGradient id="tabGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#313244"/>
+      <stop offset="100%" stop-color="#2a2b3d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Editor background -->
+  <rect width="1600" height="400" fill="url(#bg)"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="1600" height="36" fill="#181825"/>
+
+  <!-- Traffic light dots -->
+  <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="18" r="6" fill="#28c840"/>
+
+  <!-- File tab -->
+  <rect x="90" y="6" width="220" height="30" rx="4" fill="url(#tabGrad)"/>
+  <text x="108" y="25" font-family="'Fira Code','Courier New',monospace" font-size="12" fill="#cdd6f4">📄 computational_biology.py</text>
+
+  <!-- Active line highlight -->
+  <rect x="52" y="164" width="1548" height="22" fill="#2a2b40" opacity="0.6"/>
+
+  <!-- Line number gutter separator -->
+  <line x1="54" y1="36" x2="54" y2="400" stroke="#313244" stroke-width="1"/>
+
+  <!-- Line numbers -->
+  <g font-family="'Fira Code','Courier New',monospace" font-size="13.5" fill="#45475a" text-anchor="end">
+    <text x="46" y="58">1</text>  <text x="46" y="78">2</text>  <text x="46" y="98">3</text>
+    <text x="46" y="118">4</text> <text x="46" y="138">5</text> <text x="46" y="158">6</text>
+    <text x="46" y="178">7</text> <text x="46" y="198">8</text> <text x="46" y="218">9</text>
+    <text x="46" y="238">10</text><text x="46" y="258">11</text><text x="46" y="278">12</text>
+    <text x="46" y="298">13</text><text x="46" y="318">14</text><text x="46" y="338">15</text>
+    <text x="46" y="358">16</text><text x="46" y="378">17</text>
+  </g>
+
+  <!-- Code lines — syntax highlighted -->
+  <!-- Colors: keyword=#c678dd  string=#98c379  comment=#5c6370  func=#61afef  type=#e5c07b  number=#d19a66  default=#abb2bf  special=#56b6c2 -->
+
+  <!-- Line 1: # Computational Biology — Sequence & Genomic Analysis -->
+  <text x="64" y="58" font-family="'Fira Code','Courier New',monospace" font-size="13.5" fill="#5c6370"># Computational Biology — Sequence &amp; Genomic Analysis</text>
+
+  <!-- Line 2: import numpy as np -->
+  <text y="78" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#c678dd">import</tspan><tspan fill="#abb2bf"> numpy </tspan><tspan fill="#c678dd">as</tspan><tspan fill="#abb2bf"> np</tspan>
+  </text>
+
+  <!-- Line 3: from Bio import SeqIO, pairwise2 -->
+  <text y="98" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#c678dd">from</tspan><tspan fill="#e5c07b"> Bio </tspan><tspan fill="#c678dd">import</tspan><tspan fill="#abb2bf"> SeqIO, pairwise2</tspan>
+  </text>
+
+  <!-- Line 4: from sklearn.decomposition import PCA -->
+  <text y="118" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#c678dd">from</tspan><tspan fill="#abb2bf"> sklearn.decomposition </tspan><tspan fill="#c678dd">import</tspan><tspan fill="#e5c07b"> PCA</tspan>
+  </text>
+
+  <!-- Line 5: blank -->
+
+  <!-- Line 6: def gc_content(seq: str) -> float: -->
+  <text y="158" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#c678dd">def </tspan><tspan fill="#61afef">gc_content</tspan><tspan fill="#abb2bf">(</tspan><tspan fill="#e5c07b">seq</tspan><tspan fill="#abb2bf">: </tspan><tspan fill="#56b6c2">str</tspan><tspan fill="#abb2bf">) -&gt; </tspan><tspan fill="#56b6c2">float</tspan><tspan fill="#abb2bf">:</tspan>
+  </text>
+
+  <!-- Line 7:     """Calculate GC content of a DNA sequence.""" -->
+  <text x="98" y="178" font-family="'Fira Code','Courier New',monospace" font-size="13.5" fill="#98c379">"""Calculate GC content of a DNA sequence."""</text>
+
+  <!-- Line 8:     gc = seq.count('G') + seq.count('C') -->
+  <text y="198" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="98" fill="#abb2bf">gc = seq.</tspan><tspan fill="#61afef">count</tspan><tspan fill="#abb2bf">(</tspan><tspan fill="#98c379">'G'</tspan><tspan fill="#abb2bf">) + seq.</tspan><tspan fill="#61afef">count</tspan><tspan fill="#abb2bf">(</tspan><tspan fill="#98c379">'C'</tspan><tspan fill="#abb2bf">)</tspan>
+  </text>
+
+  <!-- Line 9:     return gc / len(seq) * 100.0 -->
+  <text y="218" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="98" fill="#c678dd">return</tspan><tspan fill="#abb2bf"> gc / </tspan><tspan fill="#61afef">len</tspan><tspan fill="#abb2bf">(seq) * </tspan><tspan fill="#d19a66">100.0</tspan>
+  </text>
+
+  <!-- Line 10: blank -->
+
+  <!-- Line 11: genome = SeqIO.read("E_coli_K12.fasta", "fasta") -->
+  <text y="258" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#abb2bf">genome = SeqIO.</tspan><tspan fill="#61afef">read</tspan><tspan fill="#abb2bf">(</tspan><tspan fill="#98c379">"E_coli_K12.fasta"</tspan><tspan fill="#abb2bf">, </tspan><tspan fill="#98c379">"fasta"</tspan><tspan fill="#abb2bf">)</tspan>
+  </text>
+
+  <!-- Line 12: gc = gc_content(str(genome.seq)) -->
+  <text y="278" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#abb2bf">gc = </tspan><tspan fill="#61afef">gc_content</tspan><tspan fill="#abb2bf">(</tspan><tspan fill="#56b6c2">str</tspan><tspan fill="#abb2bf">(genome.seq))</tspan>
+  </text>
+
+  <!-- Line 13: print(f"GC Content: {gc:.2f}%") -->
+  <text y="298" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#61afef">print</tspan><tspan fill="#abb2bf">(</tspan><tspan fill="#98c379">f"GC Content: </tspan><tspan fill="#56b6c2">{gc:.2f}</tspan><tspan fill="#98c379">%"</tspan><tspan fill="#abb2bf">)</tspan>
+  </text>
+
+  <!-- Line 14: blank -->
+
+  <!-- Line 15: # Cluster gene expression by PCA -->
+  <text x="64" y="338" font-family="'Fira Code','Courier New',monospace" font-size="13.5" fill="#5c6370"># Cluster gene expression profiles via PCA</text>
+
+  <!-- Line 16: expression = np.load("rna_seq_matrix.npy") -->
+  <text y="358" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#abb2bf">expression = np.</tspan><tspan fill="#61afef">load</tspan><tspan fill="#abb2bf">(</tspan><tspan fill="#98c379">"rna_seq_matrix.npy"</tspan><tspan fill="#abb2bf">)</tspan>
+  </text>
+
+  <!-- Line 17: pca = PCA(n_components=3).fit_transform(expression) -->
+  <text y="378" font-family="'Fira Code','Courier New',monospace" font-size="13.5">
+    <tspan x="64" fill="#abb2bf">pca = </tspan><tspan fill="#e5c07b">PCA</tspan><tspan fill="#abb2bf">(n_components=</tspan><tspan fill="#d19a66">3</tspan><tspan fill="#abb2bf">).</tspan><tspan fill="#61afef">fit_transform</tspan><tspan fill="#abb2bf">(expression)</tspan>
+  </text>
+
+  <!-- Right side: PCA scatter plot visualization -->
+  <!-- Axis lines -->
+  <line x1="1080" y1="60" x2="1080" y2="360" stroke="#45475a" stroke-width="1.5"/>
+  <line x1="1080" y1="360" x2="1540" y2="360" stroke="#45475a" stroke-width="1.5"/>
+
+  <!-- Axis labels -->
+  <text x="1310" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#6272a4">PC1</text>
+  <text x="1060" y="215" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#6272a4" transform="rotate(-90,1060,215)">PC2</text>
+  <text x="1310" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#cdd6f4" opacity="0.7">Gene Expression PCA</text>
+
+  <!-- Cluster 1 (teal — Upregulated) -->
+  <g fill="#50fa7b" opacity="0.75">
+    <circle cx="1160" cy="180" r="5"/><circle cx="1175" cy="200" r="4"/><circle cx="1145" cy="165" r="4"/>
+    <circle cx="1190" cy="185" r="5"/><circle cx="1155" cy="210" r="4"/><circle cx="1170" cy="155" r="5"/>
+    <circle cx="1135" cy="190" r="4"/><circle cx="1200" cy="170" r="4"/><circle cx="1180" cy="220" r="3"/>
+    <circle cx="1148" cy="142" r="4"/><circle cx="1165" cy="230" r="3"/><circle cx="1210" cy="195" r="4"/>
+  </g>
+  <!-- Cluster 2 (pink — Downregulated) -->
+  <g fill="#ff79c6" opacity="0.75">
+    <circle cx="1340" cy="140" r="5"/><circle cx="1360" cy="125" r="4"/><circle cx="1325" cy="155" r="4"/>
+    <circle cx="1375" cy="140" r="5"/><circle cx="1350" cy="108" r="4"/><circle cx="1390" cy="130" r="3"/>
+    <circle cx="1310" cy="145" r="4"/><circle cx="1365" cy="160" r="4"/><circle cx="1345" cy="95" r="3"/>
+    <circle cx="1380" cy="115" r="4"/><circle cx="1320" cy="170" r="3"/><circle cx="1400" cy="148" r="4"/>
+  </g>
+  <!-- Cluster 3 (yellow — Housekeeping) -->
+  <g fill="#f1fa8c" opacity="0.75">
+    <circle cx="1290" cy="270" r="5"/><circle cx="1310" cy="290" r="4"/><circle cx="1270" cy="255" r="4"/>
+    <circle cx="1330" cy="275" r="5"/><circle cx="1295" cy="305" r="4"/><circle cx="1315" cy="248" r="3"/>
+    <circle cx="1255" cy="280" r="4"/><circle cx="1345" cy="265" r="4"/><circle cx="1275" cy="315" r="3"/>
+    <circle cx="1335" cy="295" r="4"/><circle cx="1260" cy="300" r="3"/><circle cx="1350" cy="280" r="3"/>
+  </g>
+
+  <!-- Legend -->
+  <circle cx="1100" cy="310" r="5" fill="#50fa7b" opacity="0.8"/>
+  <text x="1112" y="315" font-family="Arial,sans-serif" font-size="11" fill="#cdd6f4" opacity="0.7">Upregulated</text>
+  <circle cx="1100" cy="328" r="5" fill="#ff79c6" opacity="0.8"/>
+  <text x="1112" y="333" font-family="Arial,sans-serif" font-size="11" fill="#cdd6f4" opacity="0.7">Downregulated</text>
+  <circle cx="1100" cy="346" r="5" fill="#f1fa8c" opacity="0.8"/>
+  <text x="1112" y="351" font-family="Arial,sans-serif" font-size="11" fill="#cdd6f4" opacity="0.7">Housekeeping</text>
+
+  <!-- Cursor blinking line after last line of code -->
+  <rect x="64" y="382" width="9" height="14" fill="#cdd6f4" opacity="0.7"/>
+</svg>

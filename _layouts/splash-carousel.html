@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="page__hero--overlay hero-carousel" id="hero-carousel">
+  <div class="hero-slide" style="background-image: url('{{ "/assets/images/banner-dna.svg" | relative_url }}')"></div>
+  <div class="hero-slide" style="background-image: url('{{ "/assets/images/banner-python-bio.svg" | relative_url }}')"></div>
+  <div class="hero-slide" style="background-image: url('{{ "/assets/images/banner-bio-wearable.svg" | relative_url }}')"></div>
+  <div class="wrapper hero-carousel__content">
+    {% if page.title %}<h1 id="page-title" class="page__title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+    {% if page.excerpt %}<p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+    {% if page.header.actions %}
+      <p>{% for action in page.header.actions %}<a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label }}</a> {% endfor %}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <section class="page__content" itemprop="text">{{ content }}</section>
+  </article>
+</div>
+
+<script>
+(function () {
+  var slides = document.querySelectorAll('#hero-carousel .hero-slide');
+  if (!slides.length) return;
+  var idx = 0;
+  slides[0].classList.add('active');
+  setInterval(function () {
+    slides[idx].classList.remove('active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 10000);
+}());
+</script>
