@@ -71,7 +71,7 @@ tiny-os is in active development. The formal specification (v1.1) is complete an
 
 ### Links
 
-- [Specification (v1.1)]((https://github.com/ScottsSecondAct/tiny-os/docs/tiny_os_specification_v1.1.docx) — Full technical specification document
+- [Specification (v1.1)](https://github.com/ScottsSecondAct/tiny-os/docs/tiny_os_specification_v1.1.docx) — Full technical specification document
 - [GitHub](https://github.com/ScottsSecondAct/tiny-os) — Source repository
 
 ### Background
