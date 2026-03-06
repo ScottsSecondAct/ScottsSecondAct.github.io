@@ -1,0 +1,110 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<style>
+.blog-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  padding: 0.6em 0.85em;
+  background: #f8f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+.blog-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.blog-filter-label {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #666;
+}
+.blog-filter-select {
+  font-size: 0.82em;
+  padding: 0.25em 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  color: #494e52;
+  cursor: pointer;
+}
+.blog-filter-select:focus {
+  outline: none;
+  border-color: #0092ca;
+}
+#blog-no-results {
+  font-style: italic;
+  color: #888;
+  margin-top: 1em;
+}
+</style>
+
+{% comment %}Collect unique tags across all notes{% endcomment %}
+{% assign all_tags = "" | split: "" %}
+{% assign entries = site[page.collection] | where_exp: "doc", "doc.hidden != true" %}
+{% if page.sort_by %}
+  {% assign entries = entries | sort: page.sort_by %}
+{% endif %}
+{% for doc in entries %}
+  {% for tag in doc.tags %}
+    {% unless all_tags contains tag %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign all_tags = all_tags | sort %}
+
+<div class="blog-filter-bar">
+  <div class="blog-filter-group">
+    <label class="blog-filter-label" for="filter-tag">Tag</label>
+    <select class="blog-filter-select" id="filter-tag">
+      <option value="">All</option>
+      {% for tag in all_tags %}
+      <option value="{{ tag | slugify }}">{{ tag }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+
+<p id="blog-no-results" style="display:none">No notes match the selected tag.</p>
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}" id="blog-posts">
+  {% for post in entries %}
+    {% capture tag_slugs %}{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}{% endcapture %}
+    <div class="blog-post-wrapper" data-tags="{{ tag_slugs | strip }}">
+      {% include archive-single.html type=entries_layout %}
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var tagSelect = document.getElementById('filter-tag');
+
+  function applyFilters() {
+    var activeTag = tagSelect.value;
+    var wrappers = document.querySelectorAll('.blog-post-wrapper');
+    var visible = 0;
+    wrappers.forEach(function (el) {
+      var tags = (el.dataset.tags || '').split(/\s+/).filter(Boolean);
+      if (!activeTag || tags.indexOf(activeTag) !== -1) {
+        el.style.display = ''; visible++;
+      } else {
+        el.style.display = 'none';
+      }
+    });
+    var noRes = document.getElementById('blog-no-results');
+    if (noRes) noRes.style.display = visible === 0 ? '' : 'none';
+  }
+
+  tagSelect.addEventListener('change', applyFilters);
+}());
+</script>

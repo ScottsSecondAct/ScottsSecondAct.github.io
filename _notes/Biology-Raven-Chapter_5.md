@@ -7,6 +7,7 @@ topic: "#MolecularBiology"
 status: 🟢 Reviewed
 difficulty: 2
 tags:
+  - Biology
   - Molecular Biology
   - Membranes
   - Cell Biology

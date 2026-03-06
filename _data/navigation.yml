@@ -1,14 +1,8 @@
 main:
   - title: "Blog"
     url: /blog/
-  - title: "Posts by Tag"
-    url: /tags/
   - title: "Notes"
     url: /notes/
-  - title: "Notes by Tag"
-    url: /notes/tags/
-  - title: "Categories"
-    url: /categories/
   - title: "Projects"
     url: /projects/
   - title: "GitHub"

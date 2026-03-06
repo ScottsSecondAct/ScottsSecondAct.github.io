@@ -1,6 +1,6 @@
 ---
 title: "Blog"
-layout: home
+layout: blog-filtered
 permalink: /blog/
 author_profile: true
 entries_layout: list

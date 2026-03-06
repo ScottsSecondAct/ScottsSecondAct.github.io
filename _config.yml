@@ -78,7 +78,7 @@ plugins:
 author:
   name   : "Scott Davis"
   avatar : "assets/images/HeadShot.JPG"
-  bio    : "Educator, Computer Engineer and Scientist, and Computational Biologist with a passion for teaching and learning."
+  bio    : "Educator, Computer Engineer and Scientist, and aspiring Computational Biologist with a passion for teaching and learning."
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"

@@ -1,6 +1,6 @@
 ---
 title: "Notes"
-layout: collection
+layout: notes-filtered
 permalink: /notes/
 collection: notes
 entries_layout: list

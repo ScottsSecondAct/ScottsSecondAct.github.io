@@ -4,9 +4,9 @@ permalink: /about/
 ---
 ![Scott's Image](https://avatars.githubusercontent.com/u/89648717?v=4)
 
-# Scott — Educator, Computer Engineer and Scientist, and Computational Biologist
+# Scott — Educator, Computer Engineer and Scientist, and aspiring Computational Biologist
 
-After a rewarding 30-year career in the software industry building robust hardware and software systems, I made the most fulfilling move of my professional life: I became a teacher. Now I'm embarking on what I call my "Second Act" — bridging computer science and biology to tackle one of medicine's deepest challenges: the human immune system.
+After a rewarding 30-year career in the computer industry building robust hardware and software systems, I made the most fulfilling move of my professional life: I became a teacher. Now I'm embarking on what I call my "Second Act" — bridging computer science and biology to tackle one of medicine's deepest challenges: the human immune system.
 
 I teach computer science at California State University, Sacramento, where I cover everything from introductory programming logic to computer architecture. Inspiring the next generation of engineers keeps me grounded in the fundamentals while pushing me to stay current with cutting-edge technology.
 
@@ -30,9 +30,7 @@ My research lives at the intersection of computer science, artificial intelligen
 
 **AI Modeling of Complex Biological Processes.** My primary focus is building sophisticated computational frameworks to simulate, analyze, and predict autoimmune reactions — from the OLang-powered digital twin architecture described above to broader contributions in novel diagnostic tools, targeted therapies, and precision medicine approaches.
 
-**Edge AI for Healthcare.** I'm exploring how localized, real-time AI can transform medicine — from next-generation devices like artificial pancreas systems and advanced wearable health monitors, to ultra-low-cost point-of-care diagnostics that enable community health workers to serve rural, resource-limited regions with minimal infrastructure. I'm also interested in brain-computer interfaces for neurological rehabilitation and peer-to-peer collision avoidance for autonomous vehicles, inspired by aviation's TCAS.
-
-**Deep Learning.** I work in computer vision for medical imaging diagnostics and automated anomaly detection, as well as broader healthcare applications including predictive analytics, personalized treatment planning, and early disease detection.
+**Edge AI for Healthcare.** I'm exploring how localized, real-time AI can transform medicine — from next-generation devices like artificial pancreas systems and advanced wearable health monitors, to ultra-low-cost point-of-care diagnostics that enable community health workers to serve rural, resource-limited regions with minimal infrastructure. I'm also interested in brain-computer interfaces for neurological rehabilitation.
 
 **Complexity and Chaos Theory.** I explore how non-linear dynamics, emergent behaviors, and feedback loops shape complex systems — and how these concepts can model and predict human, biological, and environmental phenomena.
 
@@ -42,7 +40,9 @@ My current stack centers on a high-performance C++23/LLVM 18 toolchain for OLang
 
 ## Beyond the Screen
 
-When I'm not coding or studying biology, you'll find me in the pool, sailing, building furniture, brewing beer, or playing guitar. I'm also active in my local Rotary Club and Toastmasters — because even the best code needs a clear voice to change the world.
+When I'm not coding, designing embedded systems, or studying biology, you'll find me swimming laps in a pool, hiking, sailing, building furniture and cabinets, brewing beer, or playing guitar.
+
+I'm also active in my local Rotary Club and Toastmasters Club — because even the best scientists needs a clear voice to change the world.
 
 ## Connect
 
