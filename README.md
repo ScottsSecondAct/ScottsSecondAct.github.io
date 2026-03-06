@@ -1,5 +1,5 @@
 # Scott's Second Act
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-green.svg)](https://github.com/ScottsSecondAct/some) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![AI Assisted](https://img.shields.io/badge/AI%20Assisted-Claude-blue?logo=anthropic) [![Release](https://github.com/ScottsSecondAct/some/actions/workflows/release.yml/badge.svg)](https://github.com/ScottsSecondAct/some/actions/workflows/release.yml)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-green.svg)](https://github.com/ScottsSecondAct/some) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![AI Assisted](https://img.shields.io/badge/AI%20Assisted-Claude-blue?logo=anthropic) [![Deploy Jekyll site to Pages](https://github.com/ScottsSecondAct/ScottsSecondAct.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ScottsSecondAct/ScottsSecondAct.github.io/actions/workflows/pages.yml)
 
 Personal site for Scott Davis — educator, computer engineer, and computer scientist. Built with Jekyll and the Minimal Mistakes theme, with a custom Obsidian-compatible notes system for publishing interconnected knowledge notes.
 
