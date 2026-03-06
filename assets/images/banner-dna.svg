@@ -63,27 +63,132 @@
            C 1036,125 1064,125 1100,200 C 1136,275 1164,275 1200,200
            C 1236,125 1264,125 1300,200 C 1336,275 1364,275 1400,200
            C 1436,125 1464,125 1500,200 C 1536,275 1564,275 1600,200"
-        stroke="#00e5ff" stroke-width="5" fill="none" stroke-linecap="round"
+        stroke="#00e5ff" stroke-width="13" fill="none" stroke-linecap="round"
         filter="url(#glow)" opacity="0.85"/>
+  <path d="M 0,200 C 36,125 64,125 100,200 C 136,275 164,275 200,200
+           C 236,125 264,125 300,200 C 336,275 364,275 400,200
+           C 436,125 464,125 500,200 C 536,275 564,275 600,200
+           C 636,125 664,125 700,200 C 736,275 764,275 800,200
+           C 836,125 864,125 900,200 C 936,275 964,275 1000,200
+           C 1036,125 1064,125 1100,200 C 1136,275 1164,275 1200,200
+           C 1236,125 1264,125 1300,200 C 1336,275 1364,275 1400,200
+           C 1436,125 1464,125 1500,200 C 1536,275 1564,275 1600,200"
+        stroke="#a0efff" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.38"/>
 
-  <!-- Base pair rungs -->
+  <!-- Base pair rungs with perspective depth.
+       Each rung split at y=200: top half (receding) = dim/thin; bottom half (near viewer) = bright/thick.
+       Bottom strand alternates which color is "front" each half-cycle, matching helix geometry. -->
+
+  <!-- Back halves — peak rungs (y=125 → 200), dim/thin -->
+  <g stroke-width="1.5" stroke-linecap="round" opacity="0.28">
+    <line x1="50"   y1="125" x2="50"   y2="200" stroke="#ff6b9d"/>
+    <line x1="150"  y1="125" x2="150"  y2="200" stroke="#c8f560"/>
+    <line x1="250"  y1="125" x2="250"  y2="200" stroke="#60d5f5"/>
+    <line x1="350"  y1="125" x2="350"  y2="200" stroke="#ffd60a"/>
+    <line x1="450"  y1="125" x2="450"  y2="200" stroke="#ff6b9d"/>
+    <line x1="550"  y1="125" x2="550"  y2="200" stroke="#c8f560"/>
+    <line x1="650"  y1="125" x2="650"  y2="200" stroke="#60d5f5"/>
+    <line x1="750"  y1="125" x2="750"  y2="200" stroke="#ffd60a"/>
+    <line x1="850"  y1="125" x2="850"  y2="200" stroke="#ff6b9d"/>
+    <line x1="950"  y1="125" x2="950"  y2="200" stroke="#c8f560"/>
+    <line x1="1050" y1="125" x2="1050" y2="200" stroke="#60d5f5"/>
+    <line x1="1150" y1="125" x2="1150" y2="200" stroke="#ffd60a"/>
+    <line x1="1250" y1="125" x2="1250" y2="200" stroke="#ff6b9d"/>
+    <line x1="1350" y1="125" x2="1350" y2="200" stroke="#c8f560"/>
+    <line x1="1450" y1="125" x2="1450" y2="200" stroke="#60d5f5"/>
+    <line x1="1550" y1="125" x2="1550" y2="200" stroke="#ffd60a"/>
+  </g>
+
+  <!-- Back halves — intermediate rungs (y=147 → 200), very dim/thin -->
+  <g stroke-width="1" stroke-linecap="round" opacity="0.16">
+    <line x1="25"   y1="147" x2="25"   y2="200" stroke="#ff6b9d"/>
+    <line x1="75"   y1="147" x2="75"   y2="200" stroke="#ff6b9d"/>
+    <line x1="125"  y1="147" x2="125"  y2="200" stroke="#c8f560"/>
+    <line x1="175"  y1="147" x2="175"  y2="200" stroke="#c8f560"/>
+    <line x1="225"  y1="147" x2="225"  y2="200" stroke="#60d5f5"/>
+    <line x1="275"  y1="147" x2="275"  y2="200" stroke="#60d5f5"/>
+    <line x1="325"  y1="147" x2="325"  y2="200" stroke="#ffd60a"/>
+    <line x1="375"  y1="147" x2="375"  y2="200" stroke="#ffd60a"/>
+    <line x1="425"  y1="147" x2="425"  y2="200" stroke="#ff6b9d"/>
+    <line x1="475"  y1="147" x2="475"  y2="200" stroke="#ff6b9d"/>
+    <line x1="525"  y1="147" x2="525"  y2="200" stroke="#c8f560"/>
+    <line x1="575"  y1="147" x2="575"  y2="200" stroke="#c8f560"/>
+    <line x1="625"  y1="147" x2="625"  y2="200" stroke="#60d5f5"/>
+    <line x1="675"  y1="147" x2="675"  y2="200" stroke="#60d5f5"/>
+    <line x1="725"  y1="147" x2="725"  y2="200" stroke="#ffd60a"/>
+    <line x1="775"  y1="147" x2="775"  y2="200" stroke="#ffd60a"/>
+    <line x1="825"  y1="147" x2="825"  y2="200" stroke="#ff6b9d"/>
+    <line x1="875"  y1="147" x2="875"  y2="200" stroke="#ff6b9d"/>
+    <line x1="925"  y1="147" x2="925"  y2="200" stroke="#c8f560"/>
+    <line x1="975"  y1="147" x2="975"  y2="200" stroke="#c8f560"/>
+    <line x1="1025" y1="147" x2="1025" y2="200" stroke="#60d5f5"/>
+    <line x1="1075" y1="147" x2="1075" y2="200" stroke="#60d5f5"/>
+    <line x1="1125" y1="147" x2="1125" y2="200" stroke="#ffd60a"/>
+    <line x1="1175" y1="147" x2="1175" y2="200" stroke="#ffd60a"/>
+    <line x1="1225" y1="147" x2="1225" y2="200" stroke="#ff6b9d"/>
+    <line x1="1275" y1="147" x2="1275" y2="200" stroke="#ff6b9d"/>
+    <line x1="1325" y1="147" x2="1325" y2="200" stroke="#c8f560"/>
+    <line x1="1375" y1="147" x2="1375" y2="200" stroke="#c8f560"/>
+    <line x1="1425" y1="147" x2="1425" y2="200" stroke="#60d5f5"/>
+    <line x1="1475" y1="147" x2="1475" y2="200" stroke="#60d5f5"/>
+    <line x1="1525" y1="147" x2="1525" y2="200" stroke="#ffd60a"/>
+    <line x1="1575" y1="147" x2="1575" y2="200" stroke="#ffd60a"/>
+  </g>
+
+  <!-- Front halves — peak rungs (200 → y=275), bright/thick -->
   <g stroke-width="3" stroke-linecap="round" opacity="0.82">
-    <line x1="50"   y1="125" x2="50"   y2="275" stroke="#ff6b9d"/>
-    <line x1="150"  y1="125" x2="150"  y2="275" stroke="#c8f560"/>
-    <line x1="250"  y1="125" x2="250"  y2="275" stroke="#60d5f5"/>
-    <line x1="350"  y1="125" x2="350"  y2="275" stroke="#ffd60a"/>
-    <line x1="450"  y1="125" x2="450"  y2="275" stroke="#ff6b9d"/>
-    <line x1="550"  y1="125" x2="550"  y2="275" stroke="#c8f560"/>
-    <line x1="650"  y1="125" x2="650"  y2="275" stroke="#60d5f5"/>
-    <line x1="750"  y1="125" x2="750"  y2="275" stroke="#ffd60a"/>
-    <line x1="850"  y1="125" x2="850"  y2="275" stroke="#ff6b9d"/>
-    <line x1="950"  y1="125" x2="950"  y2="275" stroke="#c8f560"/>
-    <line x1="1050" y1="125" x2="1050" y2="275" stroke="#60d5f5"/>
-    <line x1="1150" y1="125" x2="1150" y2="275" stroke="#ffd60a"/>
-    <line x1="1250" y1="125" x2="1250" y2="275" stroke="#ff6b9d"/>
-    <line x1="1350" y1="125" x2="1350" y2="275" stroke="#c8f560"/>
-    <line x1="1450" y1="125" x2="1450" y2="275" stroke="#60d5f5"/>
-    <line x1="1550" y1="125" x2="1550" y2="275" stroke="#ffd60a"/>
+    <line x1="50"   y1="200" x2="50"   y2="275" stroke="#ff6b9d"/>
+    <line x1="150"  y1="200" x2="150"  y2="275" stroke="#c8f560"/>
+    <line x1="250"  y1="200" x2="250"  y2="275" stroke="#60d5f5"/>
+    <line x1="350"  y1="200" x2="350"  y2="275" stroke="#ffd60a"/>
+    <line x1="450"  y1="200" x2="450"  y2="275" stroke="#ff6b9d"/>
+    <line x1="550"  y1="200" x2="550"  y2="275" stroke="#c8f560"/>
+    <line x1="650"  y1="200" x2="650"  y2="275" stroke="#60d5f5"/>
+    <line x1="750"  y1="200" x2="750"  y2="275" stroke="#ffd60a"/>
+    <line x1="850"  y1="200" x2="850"  y2="275" stroke="#ff6b9d"/>
+    <line x1="950"  y1="200" x2="950"  y2="275" stroke="#c8f560"/>
+    <line x1="1050" y1="200" x2="1050" y2="275" stroke="#60d5f5"/>
+    <line x1="1150" y1="200" x2="1150" y2="275" stroke="#ffd60a"/>
+    <line x1="1250" y1="200" x2="1250" y2="275" stroke="#ff6b9d"/>
+    <line x1="1350" y1="200" x2="1350" y2="275" stroke="#c8f560"/>
+    <line x1="1450" y1="200" x2="1450" y2="275" stroke="#60d5f5"/>
+    <line x1="1550" y1="200" x2="1550" y2="275" stroke="#ffd60a"/>
+  </g>
+
+  <!-- Front halves — intermediate rungs (200 → y=253), medium -->
+  <g stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <line x1="25"   y1="200" x2="25"   y2="253" stroke="#ff6b9d"/>
+    <line x1="75"   y1="200" x2="75"   y2="253" stroke="#ff6b9d"/>
+    <line x1="125"  y1="200" x2="125"  y2="253" stroke="#c8f560"/>
+    <line x1="175"  y1="200" x2="175"  y2="253" stroke="#c8f560"/>
+    <line x1="225"  y1="200" x2="225"  y2="253" stroke="#60d5f5"/>
+    <line x1="275"  y1="200" x2="275"  y2="253" stroke="#60d5f5"/>
+    <line x1="325"  y1="200" x2="325"  y2="253" stroke="#ffd60a"/>
+    <line x1="375"  y1="200" x2="375"  y2="253" stroke="#ffd60a"/>
+    <line x1="425"  y1="200" x2="425"  y2="253" stroke="#ff6b9d"/>
+    <line x1="475"  y1="200" x2="475"  y2="253" stroke="#ff6b9d"/>
+    <line x1="525"  y1="200" x2="525"  y2="253" stroke="#c8f560"/>
+    <line x1="575"  y1="200" x2="575"  y2="253" stroke="#c8f560"/>
+    <line x1="625"  y1="200" x2="625"  y2="253" stroke="#60d5f5"/>
+    <line x1="675"  y1="200" x2="675"  y2="253" stroke="#60d5f5"/>
+    <line x1="725"  y1="200" x2="725"  y2="253" stroke="#ffd60a"/>
+    <line x1="775"  y1="200" x2="775"  y2="253" stroke="#ffd60a"/>
+    <line x1="825"  y1="200" x2="825"  y2="253" stroke="#ff6b9d"/>
+    <line x1="875"  y1="200" x2="875"  y2="253" stroke="#ff6b9d"/>
+    <line x1="925"  y1="200" x2="925"  y2="253" stroke="#c8f560"/>
+    <line x1="975"  y1="200" x2="975"  y2="253" stroke="#c8f560"/>
+    <line x1="1025" y1="200" x2="1025" y2="253" stroke="#60d5f5"/>
+    <line x1="1075" y1="200" x2="1075" y2="253" stroke="#60d5f5"/>
+    <line x1="1125" y1="200" x2="1125" y2="253" stroke="#ffd60a"/>
+    <line x1="1175" y1="200" x2="1175" y2="253" stroke="#ffd60a"/>
+    <line x1="1225" y1="200" x2="1225" y2="253" stroke="#ff6b9d"/>
+    <line x1="1275" y1="200" x2="1275" y2="253" stroke="#ff6b9d"/>
+    <line x1="1325" y1="200" x2="1325" y2="253" stroke="#c8f560"/>
+    <line x1="1375" y1="200" x2="1375" y2="253" stroke="#c8f560"/>
+    <line x1="1425" y1="200" x2="1425" y2="253" stroke="#60d5f5"/>
+    <line x1="1475" y1="200" x2="1475" y2="253" stroke="#60d5f5"/>
+    <line x1="1525" y1="200" x2="1525" y2="253" stroke="#ffd60a"/>
+    <line x1="1575" y1="200" x2="1575" y2="253" stroke="#ffd60a"/>
   </g>
 
   <!-- Nucleotide nodes on strand 2 (cyan) — alternating y=125 / y=275 -->
@@ -119,20 +224,52 @@
            C 1036,275 1064,275 1100,200 C 1136,125 1164,125 1200,200
            C 1236,275 1264,275 1300,200 C 1336,125 1364,125 1400,200
            C 1436,275 1464,275 1500,200 C 1536,125 1564,125 1600,200"
-        stroke="#ff2d87" stroke-width="5" fill="none" stroke-linecap="round"
+        stroke="#ff2d87" stroke-width="13" fill="none" stroke-linecap="round"
         filter="url(#glow)" opacity="0.85"/>
+  <path d="M 0,200 C 36,275 64,275 100,200 C 136,125 164,125 200,200
+           C 236,275 264,275 300,200 C 336,125 364,125 400,200
+           C 436,275 464,275 500,200 C 536,125 564,125 600,200
+           C 636,275 664,275 700,200 C 736,125 764,125 800,200
+           C 836,275 864,275 900,200 C 936,125 964,125 1000,200
+           C 1036,275 1064,275 1100,200 C 1136,125 1164,125 1200,200
+           C 1236,275 1264,275 1300,200 C 1336,125 1364,125 1400,200
+           C 1436,275 1464,275 1500,200 C 1536,125 1564,125 1600,200"
+        stroke="#ff9fcc" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.38"/>
+
+  <!-- 5'/3' antiparallel direction labels -->
+  <!-- Magenta runs 5'→3' left-to-right; cyan runs antiparallel 3'→5' left-to-right -->
+  <g font-family="Arial,sans-serif" font-size="13" font-weight="bold">
+    <text x="10"  y="222" fill="#ff2d87" opacity="0.9">5'</text>
+    <polygon points="32,222 32,214 42,218" fill="#ff2d87" opacity="0.9"/>
+    <text x="1570" y="222" fill="#ff2d87" opacity="0.9">3'</text>
+    <text x="10"  y="182" fill="#00e5ff" opacity="0.9">3'</text>
+    <text x="1570" y="182" fill="#00e5ff" opacity="0.9">5'</text>
+    <polygon points="1558,178 1558,186 1548,182" fill="#00e5ff" opacity="0.9"/>
+  </g>
 
   <!-- Subtle title watermark -->
   <text x="800" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="30"
         font-weight="bold" fill="#ffffff" opacity="0.08" letter-spacing="10">DNA DOUBLE HELIX</text>
 
-  <!-- Nucleotide labels at a few base pairs -->
-  <g font-family="Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="middle">
-    <text x="50"  y="108" fill="#ff6b9d" opacity="0.7">A</text><text x="50"  y="292" fill="#ff6b9d" opacity="0.7">T</text>
-    <text x="250" y="108" fill="#60d5f5" opacity="0.7">C</text><text x="250" y="292" fill="#60d5f5" opacity="0.7">G</text>
-    <text x="450" y="108" fill="#ff6b9d" opacity="0.7">A</text><text x="450" y="292" fill="#ff6b9d" opacity="0.7">T</text>
-    <text x="850" y="108" fill="#ff6b9d" opacity="0.7">T</text><text x="850" y="292" fill="#ff6b9d" opacity="0.7">A</text>
-    <text x="1050" y="108" fill="#60d5f5" opacity="0.7">G</text><text x="1050" y="292" fill="#60d5f5" opacity="0.7">C</text>
-    <text x="1250" y="108" fill="#ff6b9d" opacity="0.7">A</text><text x="1250" y="292" fill="#ff6b9d" opacity="0.7">T</text>
+  <!-- Nucleotide labels — all 16 rungs, valid Watson-Crick pairs.
+       Even x (cyan on top): top=cyan base, bottom=magenta base.
+       Odd x (magenta on top): top=magenta base, bottom=cyan base. -->
+  <g font-family="Arial,sans-serif" font-size="11" font-weight="bold" text-anchor="middle" opacity="0.75">
+    <text x="50"   y="108" fill="#ff6b9d">A</text><text x="50"   y="292" fill="#ff6b9d">T</text>
+    <text x="150"  y="108" fill="#c8f560">G</text><text x="150"  y="292" fill="#c8f560">C</text>
+    <text x="250"  y="108" fill="#60d5f5">C</text><text x="250"  y="292" fill="#60d5f5">G</text>
+    <text x="350"  y="108" fill="#ffd60a">T</text><text x="350"  y="292" fill="#ffd60a">A</text>
+    <text x="450"  y="108" fill="#ff6b9d">A</text><text x="450"  y="292" fill="#ff6b9d">T</text>
+    <text x="550"  y="108" fill="#c8f560">G</text><text x="550"  y="292" fill="#c8f560">C</text>
+    <text x="650"  y="108" fill="#60d5f5">C</text><text x="650"  y="292" fill="#60d5f5">G</text>
+    <text x="750"  y="108" fill="#ffd60a">T</text><text x="750"  y="292" fill="#ffd60a">A</text>
+    <text x="850"  y="108" fill="#ff6b9d">A</text><text x="850"  y="292" fill="#ff6b9d">T</text>
+    <text x="950"  y="108" fill="#c8f560">G</text><text x="950"  y="292" fill="#c8f560">C</text>
+    <text x="1050" y="108" fill="#60d5f5">C</text><text x="1050" y="292" fill="#60d5f5">G</text>
+    <text x="1150" y="108" fill="#ffd60a">T</text><text x="1150" y="292" fill="#ffd60a">A</text>
+    <text x="1250" y="108" fill="#ff6b9d">A</text><text x="1250" y="292" fill="#ff6b9d">T</text>
+    <text x="1350" y="108" fill="#c8f560">G</text><text x="1350" y="292" fill="#c8f560">C</text>
+    <text x="1450" y="108" fill="#60d5f5">C</text><text x="1450" y="292" fill="#60d5f5">G</text>
+    <text x="1550" y="108" fill="#ffd60a">T</text><text x="1550" y="292" fill="#ffd60a">A</text>
   </g>
 </svg>
