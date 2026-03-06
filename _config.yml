@@ -78,35 +78,23 @@ plugins:
 author:
   name   : "Scott Davis"
   avatar : "assets/images/HeadShot.JPG"
-  bio    : "Educator, Computer Engineer, and Computer Scientist with a passion for teaching and learning."
+  bio    : "Educator, Computer Engineer and Scientist, and Computational Biologist with a passion for teaching and learning."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://ScottsSecondAct.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ScottsSecondAct"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/scottdavisgv"
-    - label: "Blog"
-      icon: "fab fa-fw fa-wordpress"
-      url: "https://scottssecondact.github.io"
 
 footer:
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://ScottsSecondAct.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/ScottsSecondAct"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/scottdavisgv"
-    - label: "Blog"
-      icon: "fab fa-fw fa-wordpress"
-      url: "https://scottssecondact.github.io"
 
 defaults:
   # _posts

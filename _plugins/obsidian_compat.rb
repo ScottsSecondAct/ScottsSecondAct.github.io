@@ -216,9 +216,8 @@ module ObsidianCompat
     lines.each_with_index do |line, index|
       math_match = line.match(/^\s*\$\$(.+)\$\$\s*$/)
       if math_match
-        output << "\n"
-        output << "\\\\[#{math_match[1].strip}\\\\]\n"
-        output << "\n"
+        escaped = CGI.escapeHTML(math_match[1].strip)
+        output << "\n<p>\\[#{escaped}\\]</p>\n\n"
         next
       end
 

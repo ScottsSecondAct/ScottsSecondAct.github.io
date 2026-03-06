@@ -44,7 +44,13 @@
     mermaid.initialize({
       startOnLoad: true,
       theme: window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "default",
-      securityLevel: "loose"
+      securityLevel: "loose",
+      fontSize: 16,
+      flowchart: {
+        useMaxWidth: true,
+        nodeSpacing: 50,
+        rankSpacing: 60
+      }
     });
   </script>
 {% endif %}
@@ -53,8 +59,8 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]']]
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
       },
       chtml: {
         displayAlign: 'left',

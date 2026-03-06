@@ -4,4 +4,48 @@ layout: archive
 
 {{ content }}
 
-{% include posts-taxonomy.html taxonomies=site.categories %}
+{% comment %}Build a merged category → items map from posts + notes{% endcomment %}
+{% assign all_categories = "" | split: "" %}
+{% for cat in site.categories %}
+  {% assign all_categories = all_categories | push: cat[0] %}
+{% endfor %}
+{% for note in site.notes %}
+  {% for cat in note.categories %}
+    {% unless all_categories contains cat %}
+      {% assign all_categories = all_categories | push: cat %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign all_categories = all_categories | sort_natural %}
+
+<ul class="taxonomy__index">
+  {% for cat in all_categories %}
+    {% assign post_items = site.categories[cat] | default: empty_array %}
+    {% assign note_items = site.notes | where_exp: "note", "note.categories contains cat" %}
+    {% assign total = post_items.size | plus: note_items.size %}
+    <li>
+      <a href="#{{ cat | slugify }}">
+        <strong>{{ cat }}</strong> <span class="taxonomy__count">{{ total }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+{% for cat in all_categories %}
+  {% assign post_items = site.categories[cat] | default: empty_array %}
+  {% assign note_items = site.notes | where_exp: "note", "note.categories contains cat" %}
+  <section id="{{ cat | slugify }}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{{ cat }}</h2>
+    <div class="entries-{{ entries_layout }}">
+      {% for post in post_items %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+      {% for note in note_items %}
+        {% assign post = note %}
+        {% include archive-single.html type=entries_layout %}
+      {% endfor %}
+    </div>
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+  </section>
+{% endfor %}

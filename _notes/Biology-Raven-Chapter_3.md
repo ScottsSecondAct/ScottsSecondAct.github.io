@@ -7,23 +7,15 @@ topic: "#Biology"
 status: 🟢 Reviewed
 difficulty: 2
 tags:
-  - cornell-note
+  - Biochemistry
   - Biology
+categories:
+  - Note
 repeat: spaced every day
 hidden: false
 ---
 
 # 📝 Chapter 3: The Chemical Building Blocks of Life
-
-> [!info] Note Details
-> **Date:** `= this.created`
-> **Course:** `= this.course`
-> **Type:** `INPUT[inlineSelect(option(Lecture), option(Lab), option(Reading), option(Seminar), option(Other)):note-type]`
-> **Status:** `INPUT[inlineSelect(option(🔴 Unread), option(🟡 In Progress), option(🟢 Reviewed)):status]`
-> **Difficulty:** `INPUT[inlineSelect(option(1), option(2), option(3), option(4), option(5)):difficulty]`
-> **Topic:** `= this.topic`
-
----
 
 ## 🎯 Session Objective
 
@@ -1013,144 +1005,6 @@ graph TB
 
 ---
 
-> [!hint]- 🖥️ CS / OLang Logic *(Optional — expand if applicable)*
-> *Can any concept from this session be modeled computationally? Sketch pseudo-code, data structures, or an OLang representation.*
->
-> **Biological Process → Algorithmic Mapping:**
-> - Dehydration synthesis and hydrolysis can be modeled as reversible string concatenation/splitting operations with water molecule accounting
-> - Polymer construction resembles linked list or array append operations
-> - Enzyme specificity maps to function dispatch based on substrate type
-> - Protein folding can be modeled as an energy minimization problem
-> - Phospholipid bilayer self-assembly resembles a sorting algorithm partitioning by polarity
->
-> **Pseudo-code / OLang sketch:**
-> ```python
-> class Monomer:
->     def __init__(self, structure, functional_groups):
->         self.structure = structure
->         self.groups = functional_groups
->         self.bonds = []
-> 
-> class Polymer:
->     def __init__(self):
->         self.monomers = []
->         self.energy_stored = 0
->     
->     def dehydration_synthesis(self, monomer1, monomer2, energy_input):
->         """
->         Joins two monomers, removes H2O, stores energy
->         """
->         if energy_input < ACTIVATION_ENERGY:
->             return False
->         
->         # Remove -OH from monomer1 and -H from monomer2
->         water = remove_groups(monomer1.OH, monomer2.H)
->         
->         # Form covalent bond
->         bond = create_bond(monomer1, monomer2)
->         
->         # Add to polymer chain
->         self.monomers.extend([monomer1, monomer2])
->         self.energy_stored += energy_input
->         
->         return water  # byproduct
->     
->     def hydrolysis(self, bond_position, water_molecule):
->         """
->         Breaks bond at position, consumes H2O, releases energy
->         """
->         # Split bond
->         monomer1, monomer2 = break_bond(self.monomers, bond_position)
->         
->         # Add water components
->         monomer1.add_group("OH")
->         monomer2.add_group("H")
->         
->         # Release energy
->         energy_released = self.energy_stored / len(self.monomers)
->         
->         return (monomer1, monomer2, energy_released)
-> 
-> class Protein(Polymer):
->     """Models four levels of protein structure"""
->     def __init__(self, aa_sequence):
->         super().__init__()
->         self.primary = aa_sequence          # Level 1: sequence
->         self.secondary = []                  # Level 2: helices, sheets
->         self.tertiary = None                 # Level 3: 3D fold
->         self.quaternary = None               # Level 4: multi-subunit
->         self.is_denatured = False
->     
->     def fold(self, environment):
->         """Fold to minimum energy state based on R group interactions"""
->         self.secondary = find_local_hbonds(self.primary)
->         self.tertiary = minimize_energy(
->             self.secondary,
->             forces=['hydrophobic', 'ionic', 'hbond', 'disulfide'],
->             solvent=environment
->         )
->     
->     def denature(self, stress):
->         """Temperature, pH, or chemical disrupts shape"""
->         if stress > self.stability_threshold:
->             self.tertiary = None
->             self.secondary = []
->             self.is_denatured = True
->             # Primary structure preserved
->     
->     def renature(self, native_conditions):
->         """Refold if primary structure intact"""
->         if self.primary and native_conditions:
->             self.fold(native_conditions)
->             self.is_denatured = False
->
-> # Enzyme specificity as dispatch table
-> ENZYMES = {
->     'polysaccharide': ['amylase', 'sucrase', 'lactase', 'maltase'],
->     'protein': ['trypsin', 'pepsin', 'peptidase'],
->     'lipid': ['lipase']
-> }
-> 
-> def digest(macromolecule):
->     """Enzymatic hydrolysis simulation"""
->     enzyme = select_enzyme(macromolecule.type, ENZYMES)
->     monomers = []
->     while macromolecule.has_bonds():
->         water = H2O()
->         monomer = macromolecule.hydrolysis(
->             position=next_bond(), water_molecule=water
->         )
->         monomers.append(monomer)
->     return monomers
->
-> class PhospholipidBilayer:
->     """Self-assembly by polarity sorting"""
->     def __init__(self, phospholipids):
->         self.outer_heads = []
->         self.inner_tails = []
->         self.inner_heads = []
->         for pl in phospholipids:
->             # Sort by polarity: heads face water, tails face interior
->             self.outer_heads.append(pl.head)
->             self.inner_tails.append(pl.tails)
->             self.inner_heads.append(pl.head)
->     
->     def is_permeable(self, molecule):
->         return molecule.is_lipophilic  # Only nonpolar passes freely
-> ```
->
-> **Data structure analogy:**
-> - **Monomer**: Node in a linked list with chemical properties
-> - **Polymer**: Dynamic array or linked list where each append/remove operation has energy cost/benefit
-> - **Dehydration synthesis**: `list.append()` with energy debit and water credit
-> - **Hydrolysis**: `list.pop()` or `list.split()` with energy credit and water debit
-> - **Functional groups**: Key-value pairs determining node interaction rules
-> - **Isomers**: Same node list, different connection topology or 3D spatial hash
-> - **Protein folding**: Energy minimization / gradient descent on a potential energy surface
-> - **Phospholipid bilayer**: Sorting algorithm that partitions by polarity attribute
-
----
-
 ## 📌 Master Summary
 
 > [!check] **The Big Picture**
@@ -1184,14 +1038,6 @@ graph TB
 - How do cells generate the energy needed for dehydration synthesis reactions (ATP)?
 - What determines which proteins have quaternary structure vs. functioning as single polypeptides?
 - How do neurosteroids specifically modulate neurotransmitter receptors?
-
----
-
-## 📅 Spaced Repetition Log
-
-- [x] **24 Hours:** Review Cue Column questions only — can you answer them from memory? (@2026-02-07 09:00) ✅ 2026-02-24
-- [x] **3 Days:** Active recall of Block Summaries and Key Vocabulary (@2026-02-09 09:00) ✅ 2026-02-24
-- [x] **1 Week:** Full review — re-read notes, test yourself, update status to 🟢 (@2026-02-13 09:00) ✅ 2026-02-24
 
 ---
 

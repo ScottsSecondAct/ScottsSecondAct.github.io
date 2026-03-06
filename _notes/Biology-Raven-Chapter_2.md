@@ -7,23 +7,15 @@ topic: "#Biology"
 status: 🟢 Reviewed
 difficulty: 2
 tags:
-  - cornell-note
+  - Chemistry
   - Biology
+categories:
+  - Note
 repeat: spaced every day
 hidden: false
 ---
 
 # 📝 Chapter 2: The Nature of Molecules and Properties of Water
-
-> [!info] Note Details
-> **Date:** `= this.created`
-> **Course:** `= this.course`
-> **Type:** `INPUT[inlineSelect(option(Lecture), option(Lab), option(Reading), option(Seminar), option(Other)):note-type]`
-> **Status:** `INPUT[inlineSelect(option(🔴 Unread), option(🟡 In Progress), option(🟢 Reviewed)):status]`
-> **Difficulty:** `INPUT[inlineSelect(option(1), option(2), option(3), option(4), option(5)):difficulty]`
-> **Topic:** `= this.topic`
-
----
 
 ## 🎯 Session Objective
 
@@ -675,63 +667,6 @@ graph LR
 
 ---
 
-> [!hint]- 🖥️ CS / OLang Logic *(Computational representation of buffer system)*
-> *Modeling the carbonic acid-bicarbonate buffer as a state machine*
->
-> **Biological Process → Algorithmic Mapping:**
-> - Blood pH regulation can be modeled as a feedback control system
-> - Sensors: chemoreceptors detect [H⁺] changes
-> - Effectors: buffers, respiratory system, kidneys
-> - Control logic: if-then rules maintain homeostatic pH range
->
-> **Pseudo-code / OLang sketch:**
-> ```
-> FUNCTION maintain_blood_pH(current_pH, H_plus_added, OH_minus_added):
->   TARGET_pH = 7.4
->   TOLERANCE = 0.05
->   
->   IF H_plus_added > 0 THEN
->     // Excess acid - bicarbonate accepts H+
->     bicarbonate_consumed = MIN(H_plus_added, available_HCO3)
->     carbonic_acid_formed = bicarbonate_consumed
->     H_plus_neutralized = bicarbonate_consumed
->     current_pH = calculate_pH(H_plus_added - H_plus_neutralized)
->     
->     // If still too acidic, increase respiration
->     IF current_pH < (TARGET_pH - TOLERANCE) THEN
->       increase_respiration_rate()  // Expels CO2
->       // CO2 + H2O ↔ H2CO3 ↔ H+ + HCO3-
->       // Removing CO2 shifts equilibrium left, reducing H+
->     END IF
->   
->   ELSE IF OH_minus_added > 0 THEN
->     // Excess base - carbonic acid donates H+
->     carbonic_acid_consumed = MIN(OH_minus_added, available_H2CO3)
->     bicarbonate_formed = carbonic_acid_consumed
->     OH_minus_neutralized = carbonic_acid_consumed
->     current_pH = calculate_pH_with_OH(OH_minus_added - OH_minus_neutralized)
->     
->     // If still too alkaline, decrease respiration
->     IF current_pH > (TARGET_pH + TOLERANCE) THEN
->       decrease_respiration_rate()  // Retains CO2
->       // Retained CO2 shifts equilibrium right, increasing H+
->     END IF
->   END IF
->   
->   RETURN current_pH
-> END FUNCTION
-> ```
->
-> **Data structure analogy:**
-> - Buffer system = Queue with bidirectional flow
-> - Carbonic acid pool = Source reservoir
-> - Bicarbonate pool = Sink reservoir
-> - H⁺ concentration = State variable
-> - pH = Derived metric from state variable (logarithmic transform)
-> - Homeostatic range = Threshold values triggering regulatory responses
-
----
-
 ## 🔑 Master Summary
 
 > [!check] **The Big Picture**
@@ -759,13 +694,6 @@ graph LR
 
 ---
 
-## 📅 Spaced Repetition Log
-
-- [x] **24 Hours:** Review Cue Column questions only — can you answer them from memory? (@2026-02-07 09:00) ✅ 2026-02-24
-- [x] **3 Days:** Active recall of Block Summaries and Key Vocabulary (@2026-02-09 09:00) ✅ 2026-02-24
-- [x] **1 Week:** Full review — re-read notes, test yourself, update status to 🟢 (@2026-02-13 09:00) ✅ 2026-02-24
-
----
 
 ## 🔗 Related Notes
 

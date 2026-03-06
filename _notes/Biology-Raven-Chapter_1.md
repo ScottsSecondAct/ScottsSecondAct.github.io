@@ -7,23 +7,14 @@ topic: "#Biology"
 status: 🟢 Reviewed
 difficulty: 2
 tags:
-  - cornell-note
   - Biology
+categories:
+  - Note
 repeat: spaced every day
 hidden: false
 ---
 
-# 📝 Chapter 1: The Science of Biology (Raven Textbook)
-
-> [!info] Note Details
-> **Date:** `= this.created`
-> **Course:** `= this.course`
-> **Type:** `INPUT[inlineSelect(option(Lecture), option(Lab), option(Reading), option(Seminar), option(Other)):note-type]`
-> **Status:** `INPUT[inlineSelect(option(🔴 Unread), option(🟡 In Progress), option(🟢 Reviewed)):status]`
-> **Difficulty:** `INPUT[inlineSelect(option(1), option(2), option(3), option(4), option(5)):difficulty]`
-> **Topic:** `= this.topic`
-
----
+# 📝 Chapter 1: The Science of Biology
 
 ## 🎯 Session Objective
 
@@ -708,26 +699,11 @@ hidden: false
 *Insert screenshots, hand-drawn scans, or build your own diagrams below.*
 
 ```mermaid
-graph TB
-    subgraph "Hierarchical Organization of Life"
-    A[Atom] --> B[Molecule]
-    B --> C[Macromolecule]
-    C --> D[Organelle]
-    D --> E[Cell]
-    E --> F[Tissue]
-    F --> G[Organ]
-    G --> H[Organ System]
-    H --> I[Organism]
-    I --> J[Population]
-    J --> K[Community]
-    K --> L[Ecosystem]
-    L --> M[Biosphere]
-    end
-    
-    style A fill:#ffcccc
-    style E fill:#ccffcc
-    style I fill:#ccccff
-    style M fill:#ffffcc
+---
+title: Hierarchical Organization of Life
+---
+graph TD
+    Atom --> Molecule --> Macromolecule --> Organelle --> Cell --> Tissue --> Organ --> Organ_System[Organ System] --> Organism --> Population --> Community --> Ecosystem --> Biosphere
 ```
 
 **Scientific Method Flowchart:**
@@ -786,103 +762,6 @@ graph TB
     style Eukarya fill:#99ccff
     style Root fill:#ffff99
 ```
-
----
-
-> [!hint]- 🖥️ CS / OLang Logic *(Optional — expand if applicable)*
-> *Can any concept from this session be modeled computationally? Sketch pseudo-code, data structures, or an OLang representation.*
->
-> **Biological Process → Algorithmic Mapping:**
-> - **Scientific Method as State Machine:** The hypothesis-testing cycle can be modeled as a state machine with states and transitions based on experimental outcomes, with iterative refinement loops.
-> - **Hierarchical Organization as Tree/Graph Data Structure:** Biological organization maps to nested tree structures where each node has properties and parent-child relationships, with emergent properties computed at each level.
-> - **Phylogenetic Relationships as Weighted Tree:** Evolutionary relationships can be represented as a tree where branch lengths represent evolutionary distance/time.
-> - **Taxonomy:** 8-level nested dictionary/tree structure with each organism having a path from Domain to Species.
->
-> **Pseudo-code / OLang sketch:**
-> ```python
-> # Scientific Method as Iterative Process
-> class ScientificInquiry:
->     def __init__(self, observation):
->         self.observation = observation
->         self.hypothesis = None
->         self.confidence = 0.0
->         self.test_count = 0
->     
->     def generate_hypothesis(self):
->         self.hypothesis = induce_from_observations(self.observation)
->         return self.hypothesis
->     
->     def make_prediction(self):
->         return deduce_prediction(self.hypothesis)
->     
->     def conduct_experiment(self, prediction):
->         experimental_group = apply_variable(self.test_subjects)
->         control_group = maintain_constant(self.test_subjects)
->         exp_results = measure(experimental_group)
->         ctrl_results = measure(control_group)
->         return compare(exp_results, ctrl_results, prediction)
->     
->     def test_hypothesis(self):
->         prediction = self.make_prediction()
->         result = self.conduct_experiment(prediction)
->         self.test_count += 1
->         if result == "SUPPORTED":
->             self.confidence += 0.15
->             if self.confidence >= 0.95 and self.test_count >= 20:
->                 return "THEORY"
->             return "SUPPORTED"
->         else:
->             self.hypothesis = self.modify_hypothesis()
->             self.confidence = max(0, self.confidence - 0.1)
->             return "REJECTED"
-> 
-> 
-> # Phylogenetic Tree as Weighted Graph
-> class PhylogeneticTree:
->     def __init__(self):
->         self.nodes = {}
->         self.edges = []
->     
->     def calculate_genetic_distance(self, species_a, species_b):
->         seq_a = self.nodes[species_a].genetic_data
->         seq_b = self.nodes[species_b].genetic_data
->         differences = sum(1 for i in range(len(seq_a)) if seq_a[i] != seq_b[i])
->         return differences / len(seq_a)
->     
->     def construct_tree_woese_method(self):
->         # Use conserved, universal genes (e.g., ribosomal RNA)
->         for species_id in self.nodes:
->             conserved_genes = self.extract_conserved_genes(species_id)
->             self.nodes[species_id].add_genetic_marker(conserved_genes)
->         self.cluster_by_genetic_distance()
->         return self.tree
-> 
-> 
-> # Taxonomic Classification
-> class TaxonomicClassification:
->     levels = ["Domain", "Kingdom", "Phylum", "Class",
->               "Order", "Family", "Genus", "Species"]
->     
->     def get_binomial_name(self, organism):
->         genus = self.determine_genus(organism)
->         species = self.determine_species(organism)
->         return f"{genus.capitalize()} {species.lower()}"
->     
->     def determine_domain(self, organism):
->         if organism.has_nucleus():
->             return "Eukarya"
->         elif organism.is_extremophile() or organism.has_archaea_markers():
->             return "Archaea"
->         else:
->             return "Bacteria"
-> ```
->
-> **Data structure analogy:**
-> - **Hierarchical Organization:** Tree structure where each node represents a level with emergent properties
-> - **Phylogenetic Tree:** Weighted graph where edge weights represent evolutionary time/distance
-> - **Taxonomy:** 8-level nested dictionary with each organism having a path from Domain to Species
-> - **Scientific Method:** State machine with states {Observe, Question, Hypothesize, Predict, Experiment, Analyze, Support/Reject}
-
 ---
 
 ## 🔑 Master Summary
@@ -927,14 +806,6 @@ graph TB
 
 ---
 
-## 📅 Spaced Repetition Log
-
-- [x] **24 Hours:** Review Cue Column questions only — can you answer them from memory? ✅ 2026-02-24
-- [x] **3 Days:** Active recall of Block Summaries and Key Vocabulary ✅ 2026-02-24
-- [x] **1 Week:** Full review — re-read notes, test yourself, update status to 🟢 ✅ 2026-02-24
-
----
-
 ## 🔗 Related Notes
 
 - **Course notes:** Week 1 Lecture slides (Introduction - Biological Principles), BIO1 Syllabus
@@ -943,9 +814,6 @@ graph TB
   - Darwin, C. (1859). *On the Origin of Species*
   - Woese, C. R. & Fox, G. E. (1977). "Phylogenetic structure of the prokaryotic domain"
   - Watson & Crick (1953). "Molecular Structure of Nucleic Acids"
-- **Projects:** 
-  - OLang dissertation - modeling biological systems, semantic representation of hierarchical organization
-  - Potential connections to computational phylogenetics and bioinformatics applications
 - **Future topics:** 
   - Cell theory and cell structure (Chapter 4)
   - DNA structure and replication (Chapter 14)

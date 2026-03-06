@@ -7,24 +7,17 @@ topic: "#Biochemistry"
 status: 🟡 In Progress
 difficulty: 2
 tags:
-  - cornell-note
   - Biochemistry
-  - energy
-  - metabolism
-  - enzymes
-  - thermodynamics
+  - Energy
+  - Metabolism
+  - Enzymes
+  - Thermodynamics
   - ATP
+categories:
+  - Note
 ---
 
-# 📓 BIO1 Ch6 – Energy and Metabolism
-
-> [!info] Note Details
-> **Date:** `= this.created`
-> **Course:** `= this.course`
-> **Type:** `INPUT[inlineSelect(option(Lecture), option(Lab), option(Reading), option(Seminar), option(Other)):note-type]`
-> **Status:** `INPUT[inlineSelect(option(🔴 Unread), option(🟡 In Progress), option(🟢 Reviewed)):status]`
-> **Difficulty:** `INPUT[inlineSelect(option(1), option(2), option(3), option(4), option(5)):difficulty]`
-> **Topic:** `= this.topic`
+# 📓 Chapter 6: Energy and Metabolism
 
 > [!warning] Supplementary Note
 > Some expanded explanations of the Arrhenius equation (§6.2.4), Michaelis-Menten kinetics analogy (§6.4), and the OLang sketch (CS/OLang Logic callout) are **supplementary** content not explicitly stated in the course material. These are flagged inline with 🔖.

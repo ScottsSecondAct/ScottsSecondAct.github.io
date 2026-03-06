@@ -7,23 +7,14 @@ topic: "#MolecularBiology"
 status: 🟢 Reviewed
 difficulty: 2
 tags:
-  - cornell-note
-  - MolecularBiology
+  - Molecular Biology
   - Membranes
-  - CellBiology
+  - Cell Biology
+categories:
+  - Note
 ---
 
-# 📝 Chapter 5 — Membranes
-
-> [!info] Note Details
-> **Date:** `= this.created`
-> **Course:** `= this.course`
-> **Type:** `INPUT[inlineSelect(option(Lecture), option(Lab), option(Reading), option(Seminar), option(Other)):note-type]`
-> **Status:** `INPUT[inlineSelect(option(🔴 Unread), option(🟡 In Progress), option(🟢 Reviewed)):status]`
-> **Difficulty:** `INPUT[inlineSelect(option(1), option(2), option(3), option(4), option(5)):difficulty]`
-> **Topic:** `= this.topic`
-
----
+# 📝 Chapter 5: Membranes
 
 ## 🎯 Session Objective
 

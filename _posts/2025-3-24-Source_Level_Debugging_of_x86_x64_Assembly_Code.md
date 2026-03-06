@@ -10,8 +10,6 @@ tags:
   - x86_x64 Microprocessor
 ---
 
-## Overview
-
 Source-level debugging is a superpower, especially when you're working in assembly.
 When you integrate GDB with Visual Studio Code, it becomes a visual experience where:
 

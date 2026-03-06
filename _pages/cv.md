@@ -6,14 +6,12 @@ permalink: /cv/
 
 ### Contact Information
 
-[Email](ScottDavis.gv@gmail.com)
+[scott@ScottsSecondAct.com](mailto:scott@ScottsSecondAct.com)
 
 ### Digital Portfolio
 
-- [<i class="fas fa-fw fa-link" style="color: #1a73e8;"></i> Website](https://ScottsSecondAct.com)
 - [<i class="fab fa-fw fa-github" style="color: #333;"></i> GitHub](https://github.com/ScottsSecondAct)
 - [<i class="fab fa-fw fa-linkedin" style="color: #0077B5;"></i> LinkedIn](https://linkedin.com/in/scottdavisgv)
-- [<i class="fab fa-fw fa-wordpress" style="color: #21759b;"></i> Blog](https://scottssecondact.github.io)
 
 
 ## Skills

@@ -7,22 +7,13 @@ topic: "#MolecularBiology"
 status: 🟢 Reviewed
 difficulty: 2
 tags:
-  - cornell-note
-  - MolecularBiology
-  - CellBiology
+  - Molecular Biology
+  - Cell Biology
+categories:
+  - Note
 ---
 
-# 📝 Ch4 — Cell Structure
-
-> [!info] Note Details
-> **Date:** `= this.created`
-> **Course:** `= this.course`
-> **Type:** `INPUT[inlineSelect(option(Lecture), option(Lab), option(Reading), option(Seminar), option(Other)):note-type]`
-> **Status:** `INPUT[inlineSelect(option(🔴 Unread), option(🟡 In Progress), option(🟢 Reviewed)):status]`
-> **Difficulty:** `INPUT[inlineSelect(option(1), option(2), option(3), option(4), option(5)):difficulty]`
-> **Topic:** `= this.topic`
-
----
+# 📝 Chapter 4: Cell Structure
 
 ## 🎯 Session Objective
 
@@ -744,46 +735,6 @@ graph TD
     style IF fill:#e0ffe0,stroke:#0a0
     style MT fill:#e0e0ff,stroke:#00c
 ```
-
----
-
-> [!hint]- 🖥️ CS / OLang Logic *(Optional — expand if applicable)*
-> *Can any concept from this session be modeled computationally? Sketch pseudo-code, data structures, or an OLang representation.*
->
-> **Biological Process → Algorithmic Mapping:**
-> - The **endomembrane protein trafficking pathway** maps to a multi-stage processing pipeline with conditional routing at the Golgi's trans face — analogous to a factory assembly line with a final sorting/dispatch step.
->
-> **Pseudo-code / OLang sketch:**
-> ```
-> FUNCTION process_protein(mRNA):
->     protein = ribosome.translate(mRNA)          // Ribosome on RER
->     protein = RER.fold(protein)                 // Folding in ER lumen
->     protein = RER.glycosylate(protein)          // Add sugar groups
->     vesicle = RER.bud(protein)                  // Package into vesicle
->     
->     Golgi.receive(vesicle, face="cis")          // Vesicle fuses with cis face
->     protein = Golgi.modify(protein)             // Further glycosylation
->     tag = Golgi.sort_and_tag(protein)           // Assign destination label
->     
->     IF tag == "EXPORT" THEN
->         secretory_vesicle = Golgi.package(protein, face="trans")
->         plasma_membrane.fuse(secretory_vesicle) // Exocytosis
->     ELSE IF tag == "LYSOSOME" THEN
->         transport_vesicle = Golgi.package(protein, face="trans")
->         lysosome.receive(transport_vesicle)     // Intracellular digestion
->     ELSE IF tag == "INTERNAL" THEN
->         transport_vesicle = Golgi.package(protein, face="trans")
->         target_organelle.receive(transport_vesicle)
->     END
-> END
-> ```
->
-> **Data structure analogy:**
-> - **Cell** ≈ Object with nested organelle objects, each exposing methods (`.translate()`, `.fold()`, `.fuse()`).
-> - **Vesicle** ≈ Message/packet in a message-passing architecture — carries a payload (protein/lipid) and a destination header (molecular tag).
-> - **Golgi apparatus** ≈ Router/load balancer — inspects tags and routes vesicles to the correct destination.
-> - **Lysosome** ≈ Garbage collector — reclaims resources from degraded macromolecules and worn-out organelles.
-> - **Cytoskeleton** ≈ Network infrastructure — microtubules are the highways (tracks for motor protein "vehicles"), microfilaments are the local roads (shape/movement), intermediate filaments are the structural beams (load-bearing).
 
 ---
 
