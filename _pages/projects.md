@@ -8,6 +8,78 @@ toc_label: "Contents"
 math: true
 ---
 
+## tiny-os
+
+A bare-metal real-time operating system for the Raspberry Pi 5, written in Rust.
+
+### Overview
+
+tiny-os is a preemptive, priority-based RTOS targeting the Broadcom BCM2712 system-on-chip at the heart of the Raspberry Pi 5. It runs directly on the hardware with no underlying operating system — just the ARM Cortex-A76 cores, a kernel, and your tasks.
+
+The project explores what it takes to build an operating system from scratch on modern 64-bit ARM hardware: bootstrapping from the GPU bootloader, configuring the MMU and GIC interrupt controller, implementing a deterministic scheduler, and providing inter-task communication primitives that work correctly in both single-core and SMP configurations.
+
+### Goals
+
+- **Deterministic scheduling** with sub-microsecond interrupt-to-task latency on a 2.4 GHz Cortex-A76 core
+- **Static allocation throughout** — no heap in the kernel, fixed-size memory pools, all objects allocated at initialization
+- **MMU-based task isolation** using ARMv8-A translation tables with per-task address spaces and ASID-tagged TLB entries
+- **Configurable SMP support** — run on one core or all four, with per-core ready queues and IPI-based cross-core signaling
+- **Rust implementation** (`#[no_std]`, `aarch64-unknown-none` target) with assembly limited to the exception vector table, context switch, and EL2-to-EL1 drop
+
+### Hardware
+
+| | |
+|---|---|
+| **SoC** | Broadcom BCM2712 (C1 and D0 steppings) |
+| **CPU** | Quad-core ARM Cortex-A76 @ 2.4 GHz, ARMv8.2-A |
+| **RAM** | 1–16 GB LPDDR4X (all Pi 5 variants supported) |
+| **Interrupts** | ARM GICv2 (GIC-400) |
+| **Timer** | ARMv8 Generic Timer, 54 MHz |
+| **I/O** | RP1 southbridge via PCIe x4 |
+
+tiny-os also runs on the Raspberry Pi 500, 500+, and Compute Module 5.
+
+### Architecture
+
+The kernel executes at EL1. Application tasks run at EL0 with hardware-enforced memory isolation. System calls enter the kernel through SVC exceptions; hardware interrupts are routed through the GIC.
+
+Key subsystems:
+
+- **Scheduler** — Preemptive fixed-priority with O(1) task selection via CLZ on a 256-level priority bitmap. Optional round-robin time-slicing within equal-priority levels.
+- **Context switch** — Full AArch64 register save/restore (X0–X30, SP_EL0, ELR_EL1, SPSR_EL1) with lazy NEON/FP save. MMU context switch via TTBR0_EL1 with ASID tagging to avoid TLB flushes.
+- **IPC** — Counting semaphores, mutexes with priority inheritance, fixed-size message queues, and event flags. All primitives are SMP-safe.
+- **Memory** — Fixed-size block pool allocator with O(1) alloc/free. Guard pages for hardware stack overflow detection. Per-task page tables with configurable memory regions.
+- **Drivers** — Uniform trait-based driver interface. Included drivers for RP1 UART (PL011), SPI, I2C, GPIO, Gigabit Ethernet, and BCM2712 SD controller.
+
+### Bare-Metal Boot
+
+tiny-os boots as `kernel8.img` from the Pi 5's FAT32 boot partition. Three `config.txt` settings are essential for bare-metal operation:
+
+| Setting | Purpose |
+|---|---|
+| `os_check=0` | Disables the firmware's OS compatibility check |
+| `uart_early_init=1` | Firmware initializes RP1 UART0 and preserves the PCIe link to RP1 |
+| `pciex4_reset=0` | Inherits firmware's PCIe configuration, avoiding the need for a full RC driver at boot |
+
+### Safety Targets
+
+The design targets IEC 61508 SIL-2 and ISO 26262 ASIL-B certification, leveraging the Ferrocene qualified Rust toolchain. All `unsafe` code is confined to well-documented modules with explicit safety invariant comments.
+
+### Status
+
+tiny-os is in active development. The formal specification (v1.1) is complete and covers all kernel subsystems, the SMP model, and the Raspberry Pi 5 hardware platform. Implementation is proceeding through a ten-phase roadmap, beginning with bare-metal bootstrap and UART console output.
+
+### Links
+
+- [Specification (v1.1)](/projects/tiny-os/tiny_os_specification_v1.1.docx) — Full technical specification document
+- [GitHub](https://github.com/ScottsSecondAct/tiny-os) — Source repository
+
+### Background
+
+tiny-os evolved from an earlier design called simple\_os, which targeted ARM Cortex-M microcontrollers. The pivot to the Raspberry Pi 5 and its Cortex-A76 cores required rethinking the interrupt model (NVIC to GICv2), memory protection (MPU to MMU), privilege model (Thread/Handler mode to EL0/EL1), and the context switch mechanism. The choice of Rust over C was driven by the alignment between Rust's ownership semantics and the kernel's static allocation philosophy — many of the invariants that MISRA C guidelines enforce through coding discipline are checked at compile time by the Rust type system.
+
+---
+
 ## OLang — A Domain-Specific Language for Mechanistic Genomics
 
 **OLang** is a native C++23/LLVM 18-powered Domain-Specific Language (DSL) and multi-scale compiler architecture designed to bridge the gap between biological intent and computational implementation. The full title of the research program is:
