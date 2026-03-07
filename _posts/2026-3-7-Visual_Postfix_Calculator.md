@@ -4,15 +4,12 @@ date: 2026-03-07
 author: Scott
 tags: [java, javafx, data-structures, rpn, calculator, ai, csci-13]
 header:
-  image: /assets/images/VisualPostfixCalculator.jpg
   teaser: /assets/images/VisualPostfixCalculator.jpg
 description: >
   How I built a full scientific RPN calculator in JavaFX that visualizes
   the stack in real time — as a teaching tool for CSCI-13 at Sierra College,
   with AI assistance from Anthropic's Claude.
 ---
-
-![Visual RPN Scientific Calculator](VisualPostfixCalculator.jpg)
 
 # Building a Visual RPN Scientific Calculator with JavaFX and AI Assistance
 
