@@ -11,8 +11,6 @@ description: >
   with AI assistance from Anthropic's Claude.
 ---
 
-# Building a Visual RPN Scientific Calculator with JavaFX and AI Assistance
-
 For my CSCI-13 course — *Programming Concepts and Methodology II* — at
 [Sierra College](https://www.sierracollege.edu), I wanted a project that
 would demonstrate a fundamental data structure concept in the most concrete
@@ -211,3 +209,4 @@ The source is MIT licensed and lives on GitHub:
 
 *Built for CSCI-13 — Programming Concepts and Methodology II at
 [Sierra College](https://www.sierracollege.edu).*
+
